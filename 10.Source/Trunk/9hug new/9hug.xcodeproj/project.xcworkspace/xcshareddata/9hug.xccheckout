@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9D98796E-984E-4F6C-A94A-C4A7AD7A09F0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>9hug</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D8AC3F54-615D-4034-9572-DD2BC904B9FB</key>
+		<string>https://bitbucket.org/quangmv/9hug.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>9hug.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D8AC3F54-615D-4034-9572-DD2BC904B9FB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/quangmv/9hug.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D8AC3F54-615D-4034-9572-DD2BC904B9FB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D8AC3F54-615D-4034-9572-DD2BC904B9FB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>9hug</string>
+		</dict>
+	</array>
+</dict>
+</plist>

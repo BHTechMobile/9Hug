@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MixVideoViewController">
+            <connections>
+                <outlet property="btnFrames" destination="G0z-i7-CWs" id="DLd-5h-PgR"/>
+                <outlet property="btnPlay" destination="dPH-KO-yfy" id="vfp-hm-blo"/>
+                <outlet property="btnVideoFilters" destination="dle-ob-JGy" id="UT6-Tn-d48"/>
+                <outlet property="imvFrame" destination="y5D-rz-5Op" id="JSN-pl-WiW"/>
+                <outlet property="imvPlay" destination="xAR-wj-O90" id="sGh-HD-7F7"/>
+                <outlet property="messageButton" destination="iMU-L7-29z" id="jKw-Te-ICv"/>
+                <outlet property="notificationButton" destination="PJK-9d-BRz" id="qdg-dU-irX"/>
+                <outlet property="playerView" destination="oBn-pT-6ZD" id="YpD-f3-Usj"/>
+                <outlet property="selectFrameScrollView" destination="NeA-07-f05" id="SGy-OI-Eut"/>
+                <outlet property="videoFilterScrollView" destination="fr2-R8-s9c" id="79W-B1-eU0"/>
+                <outlet property="view" destination="gVH-4s-mN6" id="y5B-kR-om8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="gVH-4s-mN6">
+            <rect key="frame" x="0.0" y="44" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBn-pT-6ZD" customClass="GPUImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="N0l-UL-ZPq"/>
+                        <constraint firstAttribute="height" constant="320" id="fbI-wd-khu"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5_floral_on_the_right.png" translatesAutoresizingMaskIntoConstraints="NO" id="y5D-rz-5Op">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="320" id="BPp-FY-K3d"/>
+                        <constraint firstAttribute="width" constant="320" id="S3B-VS-aDO"/>
+                    </constraints>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_play.png" translatesAutoresizingMaskIntoConstraints="NO" id="xAR-wj-O90">
+                    <rect key="frame" x="98" y="98" width="125" height="125"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="S4h-gc-97i"/>
+                        <constraint firstAttribute="width" constant="125" id="hzr-vQ-20J"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPH-KO-yfy">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="Em2-bZ-ugY"/>
+                        <constraint firstAttribute="height" constant="320" id="Zzp-Ud-XBf"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clickedPlayButton:" destination="-1" eventType="touchUpInside" id="5YA-SJ-6IQ"/>
+                    </connections>
+                </button>
+                <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRh-w0-iiB">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="DQc-DC-BSy"/>
+                        <constraint firstAttribute="width" constant="320" id="bPI-Mk-feU"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kqw-p7-P66">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJK-9d-BRz">
+                            <rect key="frame" x="256" y="0.0" width="34" height="33"/>
+                            <state key="normal" image="icon_notification.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="icon_notification_on.png"/>
+                            <connections>
+                                <action selector="notificationButtonTapped:" destination="-1" eventType="touchUpInside" id="hmu-21-eZv"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8df-n1-2yC">
+                            <rect key="frame" x="68" y="2" width="34" height="33"/>
+                            <state key="normal" image="btn_frame_white.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNW-dB-nYx">
+                            <rect key="frame" x="0.0" y="2" width="34" height="33"/>
+                            <state key="normal" image="btn_calendar_white.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="calenderButtonTapped:" destination="-1" eventType="touchUpInside" id="NaZ-i1-BdS"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMU-L7-29z">
+                            <rect key="frame" x="31" y="1" width="34" height="33"/>
+                            <state key="normal" image="icon_text_message.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="icon_text_message_on.png"/>
+                            <connections>
+                                <action selector="addMessageButtonTapped:" destination="-1" eventType="touchUpInside" id="O8E-AI-wQL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nef-43-JwP">
+                            <rect key="frame" x="284" y="0.0" width="34" height="35"/>
+                            <state key="normal" image="icon_tag.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="icon_tag_on.png"/>
+                            <connections>
+                                <action selector="tagButtonTapped:" destination="-1" eventType="touchUpInside" id="qkY-VG-VbA"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="hk0-ta-wj8"/>
+                        <constraint firstAttribute="height" constant="35" id="jMr-8c-BJX"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JuB-TJ-U7J">
+                    <rect key="frame" x="0.0" y="320" width="320" height="160"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0z-i7-CWs">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="sc0-fp-Bwe"/>
+                                <constraint firstAttribute="height" constant="42" id="soX-Fq-FaL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Frames" backgroundImage="btn_mix_filter_untouch_button.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="btn_mix_filter_button.png"/>
+                            <state key="highlighted" backgroundImage="btn_mix_filter_button.png"/>
+                            <connections>
+                                <action selector="clickedFramesButtons:" destination="-1" eventType="touchUpInside" id="Xbx-ah-sEx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dle-ob-JGy">
+                            <rect key="frame" x="101" y="0.0" width="100" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="QPw-UA-KBC"/>
+                                <constraint firstAttribute="width" constant="100" id="dAX-dm-5dG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <state key="normal" title="Video Filters" backgroundImage="btn_mix_filter_untouch_button.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="btn_mix_filter_button.png"/>
+                            <state key="highlighted" backgroundImage="btn_mix_filter_button.png"/>
+                            <connections>
+                                <action selector="clickedVideoFilterButton:" destination="-1" eventType="touchUpInside" id="JNh-jn-lPq"/>
+                            </connections>
+                        </button>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeA-07-f05">
+                            <rect key="frame" x="0.0" y="42" width="320" height="118"/>
+                            <color key="backgroundColor" red="0.16862745098039217" green="0.16078431372549018" blue="0.19215686274509802" alpha="0.0" colorSpace="deviceRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="74" id="MR6-8u-iya"/>
+                                <constraint firstAttribute="width" constant="320" id="vEy-64-weu"/>
+                            </constraints>
+                        </scrollView>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr2-R8-s9c">
+                            <rect key="frame" x="0.0" y="42" width="320" height="118"/>
+                            <color key="backgroundColor" red="0.16862745100000001" green="0.16078431369999999" blue="0.19215686269999999" alpha="0.0" colorSpace="deviceRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="320" id="0gB-sM-akE"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="74" id="9Q9-8c-zj3"/>
+                            </constraints>
+                        </scrollView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1O3-Mp-KWU">
+                            <rect key="frame" x="286" y="2" width="34" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="fmM-To-8tJ"/>
+                                <constraint firstAttribute="width" constant="34" id="qAb-4P-uY8"/>
+                            </constraints>
+                            <state key="normal" image="btn_add_music.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="musicButtonTapped:" destination="-1" eventType="touchUpInside" id="HsV-0X-nrr"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="NeA-07-f05" firstAttribute="top" secondItem="JuB-TJ-U7J" secondAttribute="top" constant="42" id="Ds8-LV-I7D"/>
+                        <constraint firstItem="fr2-R8-s9c" firstAttribute="top" secondItem="JuB-TJ-U7J" secondAttribute="top" constant="42" id="G2U-Vl-tl6"/>
+                        <constraint firstItem="1O3-Mp-KWU" firstAttribute="leading" secondItem="JuB-TJ-U7J" secondAttribute="leading" constant="286" id="HZF-7u-dld"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="116" id="RZA-ws-7vz"/>
+                        <constraint firstItem="dle-ob-JGy" firstAttribute="top" secondItem="JuB-TJ-U7J" secondAttribute="top" id="YG0-1g-lO0"/>
+                        <constraint firstItem="dle-ob-JGy" firstAttribute="leading" secondItem="JuB-TJ-U7J" secondAttribute="leading" constant="101" id="eGo-yX-6xm"/>
+                        <constraint firstItem="fr2-R8-s9c" firstAttribute="leading" secondItem="JuB-TJ-U7J" secondAttribute="leading" id="enc-bE-2tn"/>
+                        <constraint firstItem="G0z-i7-CWs" firstAttribute="top" secondItem="JuB-TJ-U7J" secondAttribute="top" id="gl2-PD-p7K"/>
+                        <constraint firstAttribute="bottom" secondItem="NeA-07-f05" secondAttribute="bottom" id="hB4-Xs-dYp"/>
+                        <constraint firstItem="G0z-i7-CWs" firstAttribute="leading" secondItem="JuB-TJ-U7J" secondAttribute="leading" id="hkK-0w-gb2"/>
+                        <constraint firstAttribute="bottom" secondItem="fr2-R8-s9c" secondAttribute="bottom" id="nVM-he-4Dz"/>
+                        <constraint firstItem="NeA-07-f05" firstAttribute="leading" secondItem="JuB-TJ-U7J" secondAttribute="leading" id="rdm-fP-LS7"/>
+                        <constraint firstAttribute="width" constant="320" id="vMg-yb-MNY"/>
+                        <constraint firstItem="1O3-Mp-KWU" firstAttribute="top" secondItem="JuB-TJ-U7J" secondAttribute="top" constant="2" id="ygD-IK-jbe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dPH-KO-yfy" firstAttribute="top" secondItem="gVH-4s-mN6" secondAttribute="top" id="27c-79-wdZ"/>
+                <constraint firstItem="oBn-pT-6ZD" firstAttribute="centerX" secondItem="xAR-wj-O90" secondAttribute="centerX" constant="-0.5" id="3z8-C7-2Af"/>
+                <constraint firstItem="Kqw-p7-P66" firstAttribute="top" secondItem="gVH-4s-mN6" secondAttribute="top" id="FDY-vE-ehU"/>
+                <constraint firstItem="VRh-w0-iiB" firstAttribute="leading" secondItem="gVH-4s-mN6" secondAttribute="leading" id="GfE-kH-H0i"/>
+                <constraint firstItem="JuB-TJ-U7J" firstAttribute="top" secondItem="oBn-pT-6ZD" secondAttribute="top" constant="320" id="O26-CK-du4"/>
+                <constraint firstItem="y5D-rz-5Op" firstAttribute="leading" secondItem="gVH-4s-mN6" secondAttribute="leading" id="PCR-fv-XJs"/>
+                <constraint firstItem="oBn-pT-6ZD" firstAttribute="top" secondItem="gVH-4s-mN6" secondAttribute="top" id="Sxn-I9-RQq"/>
+                <constraint firstItem="JuB-TJ-U7J" firstAttribute="leading" secondItem="gVH-4s-mN6" secondAttribute="leading" id="UtW-K4-mjl"/>
+                <constraint firstItem="oBn-pT-6ZD" firstAttribute="leading" secondItem="gVH-4s-mN6" secondAttribute="leading" id="cQ5-TO-XHg"/>
+                <constraint firstItem="y5D-rz-5Op" firstAttribute="top" secondItem="gVH-4s-mN6" secondAttribute="top" id="hAv-ok-tlL"/>
+                <constraint firstItem="Kqw-p7-P66" firstAttribute="leading" secondItem="gVH-4s-mN6" secondAttribute="leading" id="o21-rB-UB7"/>
+                <constraint firstItem="VRh-w0-iiB" firstAttribute="top" secondItem="gVH-4s-mN6" secondAttribute="top" id="uXK-Ik-5DV"/>
+                <constraint firstAttribute="bottom" secondItem="JuB-TJ-U7J" secondAttribute="bottom" id="voS-Hh-NZe"/>
+                <constraint firstItem="dPH-KO-yfy" firstAttribute="leading" secondItem="gVH-4s-mN6" secondAttribute="leading" id="xj3-R0-ELi"/>
+                <constraint firstItem="oBn-pT-6ZD" firstAttribute="centerY" secondItem="xAR-wj-O90" secondAttribute="centerY" constant="-0.5" id="zWz-xH-0ma"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="5_floral_on_the_right.png" width="320" height="320"/>
+        <image name="btn_add_music.png" width="27" height="27"/>
+        <image name="btn_calendar_white.png" width="30" height="28"/>
+        <image name="btn_frame_white.png" width="30" height="28"/>
+        <image name="btn_mix_filter_button.png" width="100" height="41"/>
+        <image name="btn_mix_filter_untouch_button.png" width="100" height="41"/>
+        <image name="btn_play.png" width="126" height="125"/>
+        <image name="icon_notification.png" width="28" height="29"/>
+        <image name="icon_notification_on.png" width="28" height="29"/>
+        <image name="icon_tag.png" width="28" height="29"/>
+        <image name="icon_tag_on.png" width="28" height="29"/>
+        <image name="icon_text_message.png" width="28" height="29"/>
+        <image name="icon_text_message_on.png" width="28" height="29"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

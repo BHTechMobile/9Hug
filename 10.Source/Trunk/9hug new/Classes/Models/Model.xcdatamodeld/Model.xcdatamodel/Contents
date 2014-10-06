@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="HMessage" representedClassName="HMessage" syncable="YES">
+        <attribute name="agentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attachement1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attachement2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="frameid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="generateddate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photos" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reads" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="receiveddate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="receiverid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sentdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="style" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="HMessage" positionX="-63" positionY="-18" width="128" height="345"/>
+    </elements>
+</model>

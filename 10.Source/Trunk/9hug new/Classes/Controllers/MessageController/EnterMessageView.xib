@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EnterMessageView">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlD-OB-0tk">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="38"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoI-Ug-MVY">
+                            <rect key="frame" x="10" y="4" width="48" height="30"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="2c5-pG-wte"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" fixedFrame="YES" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8D-ey-T6c">
+                            <rect key="frame" x="58" y="9" width="163" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGt-5c-wJy">
+                            <rect key="frame" x="231" y="4" width="37" height="30"/>
+                            <state key="normal" title="Done">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="oa9-b9-YJ1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="ePQ-X5-uxP"/>
+                        <constraint firstAttribute="width" constant="280" id="pOK-f4-AdN"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFC-LC-UnY">
+                    <rect key="frame" x="10" y="38" width="260" height="149"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="149" id="VWv-fd-aad"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" returnKeyType="done"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3CB-ta-D2L">
+                    <rect key="frame" x="0.0" y="38" width="280" height="1"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="KRs-ue-Qhy"/>
+                        <constraint firstAttribute="height" constant="1" id="jsw-Yt-y5A"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="FFC-LC-UnY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="32o-G4-5zD"/>
+                <constraint firstItem="3CB-ta-D2L" firstAttribute="top" secondItem="xlD-OB-0tk" secondAttribute="bottom" id="Dyt-Yt-wGc"/>
+                <constraint firstAttribute="trailing" secondItem="FFC-LC-UnY" secondAttribute="trailing" constant="10" id="GQa-9M-MIi"/>
+                <constraint firstItem="xlD-OB-0tk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JP2-ge-85e"/>
+                <constraint firstAttribute="bottom" secondItem="FFC-LC-UnY" secondAttribute="bottom" constant="13" id="ZHZ-bt-cWD"/>
+                <constraint firstItem="3CB-ta-D2L" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="asA-qF-j2o"/>
+                <constraint firstAttribute="trailing" secondItem="xlD-OB-0tk" secondAttribute="trailing" id="dTY-ME-EKp"/>
+                <constraint firstAttribute="trailing" secondItem="3CB-ta-D2L" secondAttribute="trailing" id="mBg-KU-9gN"/>
+                <constraint firstItem="FFC-LC-UnY" firstAttribute="top" secondItem="xlD-OB-0tk" secondAttribute="bottom" id="oMr-1h-ANW"/>
+                <constraint firstItem="xlD-OB-0tk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yNJ-s1-NYa"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="textView" destination="FFC-LC-UnY" id="Dwx-0x-mcP"/>
+            </connections>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

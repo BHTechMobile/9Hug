@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Qfn-t9-iXX" customClass="CustomTabbarView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgr_bottom_bar_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="joH-Wj-jnD">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmU-Zn-UCB">
+                    <rect key="frame" x="7" y="51" width="42" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2X-PY-fXu">
+                    <rect key="frame" x="62" y="51" width="47" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBS-Zo-erQ">
+                    <rect key="frame" x="137" y="51" width="47" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Public" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ri-S6-41e">
+                    <rect key="frame" x="265" y="51" width="47" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Messages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epc-Rd-iay">
+                    <rect key="frame" x="200" y="51" width="64" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn_bar_me.png" highlightedImage="btn_bar_me_on.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zju-Gi-1mC">
+                    <rect key="frame" x="16" y="27" width="25" height="25"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn_bar_messages.png" highlightedImage="btn_bar_messages_on.png" translatesAutoresizingMaskIntoConstraints="NO" id="4tx-A5-a6O">
+                    <rect key="frame" x="220" y="29" width="25" height="23"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn_bar_code.png" highlightedImage="btn_bar_code_on.png" translatesAutoresizingMaskIntoConstraints="NO" id="dDe-kV-e0H">
+                    <rect key="frame" x="129" y="14" width="63" height="38"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn_bar_friends.png" highlightedImage="btn_bar_friends_on.png" translatesAutoresizingMaskIntoConstraints="NO" id="eph-co-oMj">
+                    <rect key="frame" x="64" y="26" width="45" height="26"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn_bar_public.png" highlightedImage="btn_bar_public_on.png" translatesAutoresizingMaskIntoConstraints="NO" id="qC9-zc-L1M">
+                    <rect key="frame" x="275" y="26" width="26" height="26"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szm-NK-IF0">
+                    <rect key="frame" x="0.0" y="26" width="54" height="46"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clickedButton:" destination="Qfn-t9-iXX" eventType="touchUpInside" id="Kcv-2h-yGy"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ct-lC-z5Q">
+                    <rect key="frame" x="59" y="26" width="54" height="46"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clickedButton:" destination="Qfn-t9-iXX" eventType="touchUpInside" id="cWy-5U-Coc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4q-MK-g1V">
+                    <rect key="frame" x="205" y="26" width="54" height="46"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clickedButton:" destination="Qfn-t9-iXX" eventType="touchUpInside" id="pEo-w5-R7m"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cp3-de-C4L">
+                    <rect key="frame" x="261" y="26" width="54" height="46"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clickedButton:" destination="Qfn-t9-iXX" eventType="touchUpInside" id="lvw-Eb-gfL"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxN-DE-NKS">
+                    <rect key="frame" x="129" y="10" width="63" height="58"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clickedButton:" destination="Qfn-t9-iXX" eventType="touchUpInside" id="gmk-29-FVg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="labels" destination="xmU-Zn-UCB" id="PXU-sl-QmJ"/>
+                <outletCollection property="labels" destination="f2X-PY-fXu" id="usK-Ts-zGd"/>
+                <outletCollection property="labels" destination="lBS-Zo-erQ" id="3JM-fx-tiK"/>
+                <outletCollection property="labels" destination="epc-Rd-iay" id="WdF-Tb-XwF"/>
+                <outletCollection property="labels" destination="0Ri-S6-41e" id="v3u-nO-Pmr"/>
+                <outletCollection property="buttons" destination="szm-NK-IF0" id="nam-UG-rjD"/>
+                <outletCollection property="buttons" destination="1Ct-lC-z5Q" id="bC9-8b-jCJ"/>
+                <outletCollection property="buttons" destination="fxN-DE-NKS" id="vve-kj-4rI"/>
+                <outletCollection property="buttons" destination="E4q-MK-g1V" id="qWr-4e-btm"/>
+                <outletCollection property="buttons" destination="Cp3-de-C4L" id="PgC-fU-Aor"/>
+                <outletCollection property="icons" destination="Zju-Gi-1mC" id="1Uj-9R-WOt"/>
+                <outletCollection property="icons" destination="eph-co-oMj" id="3D3-h8-b7T"/>
+                <outletCollection property="icons" destination="dDe-kV-e0H" id="ZkW-Sh-SKP"/>
+                <outletCollection property="icons" destination="4tx-A5-a6O" id="qXR-Lh-kzc"/>
+                <outletCollection property="icons" destination="qC9-zc-L1M" id="N9q-6q-08G"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="bgr_bottom_bar_white.png" width="320" height="71"/>
+        <image name="btn_bar_code.png" width="63" height="38"/>
+        <image name="btn_bar_code_on.png" width="63" height="38"/>
+        <image name="btn_bar_friends.png" width="44" height="25"/>
+        <image name="btn_bar_friends_on.png" width="44" height="25"/>
+        <image name="btn_bar_me.png" width="25" height="25"/>
+        <image name="btn_bar_me_on.png" width="25" height="25"/>
+        <image name="btn_bar_messages.png" width="26" height="23"/>
+        <image name="btn_bar_messages_on.png" width="26" height="23"/>
+        <image name="btn_bar_public.png" width="26" height="26"/>
+        <image name="btn_bar_public_on.png" width="26" height="26"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

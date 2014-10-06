@@ -1,0 +1,5 @@
+#include "Pods-cocoa-oauth.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/cocoa-oauth" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/Bolts" "${PODS_ROOT}/Headers/Facebook-iOS-SDK" "${PODS_ROOT}/Headers/Facebook-iOS-SDK/FacebookSDK" "${PODS_ROOT}/Headers/GPUImage" "${PODS_ROOT}/Headers/MBProgressHUD" "${PODS_ROOT}/Headers/MagicalRecord" "${PODS_ROOT}/Headers/NSData+Base64" "${PODS_ROOT}/Headers/REComposeViewController" "${PODS_ROOT}/Headers/ShareThis" "${PODS_ROOT}/Headers/UIView+AutoLayout" "${PODS_ROOT}/Headers/VideoPlayerKit" "${PODS_ROOT}/Headers/YLProgressBar" "${PODS_ROOT}/Headers/ZXingObjC" "${PODS_ROOT}/Headers/cocoa-oauth" "${PODS_ROOT}/Headers/iCarousel"
+OTHER_LDFLAGS = -ObjC
+PODS_ROOT = ${SRCROOT}

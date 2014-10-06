@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AABE2A3D-03BC-4F68-B782-58645E64FA9E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>9hug</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5836749a-b8e4-674a-9de8-568cb920cb48++5732</key>
+		<string>https://117.7.238.88/svn/MobileProjects/02.9hug</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>10.Source/Trunk/9hug new/9hug.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5836749a-b8e4-674a-9de8-568cb920cb48++5732</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>5836749a-b8e4-674a-9de8-568cb920cb48++5732</key>
+		<string>https://117.7.238.88/svn/MobileProjects</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://117.7.238.88/svn/MobileProjects/02.9hug/10.Source/Trunk/9hug%20new/9hug.xcworkspace</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5836749a-b8e4-674a-9de8-568cb920cb48++5732</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5836749a-b8e4-674a-9de8-568cb920cb48++5732</string>
+			<key>IDESourceControlWCCName</key>
+			<string>02.9hug</string>
+		</dict>
+	</array>
+</dict>
+</plist>
