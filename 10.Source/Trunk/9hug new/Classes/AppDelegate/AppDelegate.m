@@ -16,7 +16,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     UIImage *navBarImage;
-    navBarImage = [UIImage imageNamed:@"nav_bg"];
+    navBarImage = [UIImage imageNamed:@"nav_bg.png"];
     
     [[UINavigationBar appearance] setBackgroundImage: navBarImage forBarMetrics:UIBarMetricsDefault];
     
