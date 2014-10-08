@@ -21,6 +21,7 @@
 @interface MixVideoViewController : UIViewController<MPMediaPickerControllerDelegate,EnterMessageDelegate,AudioSetupViewControllerDelegate,UIAlertViewDelegate,AVAudioPlayerDelegate,GPUImageMovieDelegate>{
     NSArray * changeFrameButtons;
     GPUImageMovie *movieFile;
+    GPUImageMovie *filterMovie;
     GPUImageOutput<GPUImageInput> *filter;
     GPUImageMovieWriter *movieWriter;
     AVAudioPlayer * _audioPlayer;
