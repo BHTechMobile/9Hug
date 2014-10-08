@@ -34,7 +34,9 @@
                   @"GPUImageMonochromeFilter",
                   @"GPUImagePinchDistortionFilter",
                   @"GPUImageSepiaFilter",
-                  @"GPUImageZoomBlurFilter"
+                  @"GPUImageZoomBlurFilter",
+                  @"GPUImageColorDodgeBlendFilter"
+                  
                   ];
     });
     
@@ -46,20 +48,21 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         titles = @[
-                  @"None",
-                  @"Bilateral",
-                  @"Box Blur",
-                  @"Bulge",
-                  @"Invert",
-                  @"Blur",
-                  @"Selective",
-                  @"Grayscale",
-                  @"Etikate",
-                  @"Monochrome",
-                  @"Distortion",
-                  @"Sepia",
-                  @"Zoom Blur"
-                  ];
+                   @"None",
+                   @"Bilateral",
+                   @"Box Blur",
+                   @"Bulge",
+                   @"Invert",
+                   @"Blur",
+                   @"Selective",
+                   @"Grayscale",
+                   @"Etikate",
+                   @"Monochrome",
+                   @"Distortion",
+                   @"Sepia",
+                   @"Zoom Blur",
+                   @"Video Mix"
+                   ];
     });
     
     return titles;
@@ -85,7 +88,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-
+    
     // Dispose of any resources that can be recreated.
 }
 
@@ -140,7 +143,7 @@
     
     _selectFrameScrollView.contentSize = CGSizeMake(changeFrameButtons.count*66, _selectFrameScrollView.frame.size.height);
     _selectFrameScrollView.scrollEnabled = YES;
-
+    
     for (int i = 0;i<changeFrameButtons.count;i++) {
         
         UIButton * button = changeFrameButtons[i];
@@ -159,13 +162,13 @@
     
     _videoFilterScrollView.contentSize = CGSizeMake([MixVideoViewController filters].count*60, _videoFilterScrollView.frame.size.height);
     _videoFilterScrollView.scrollEnabled = YES;
-
+    
     for (int i = 0;i<[MixVideoViewController filters].count;i++) {
         
         VideoFilterActionView * actionView = [VideoFilterActionView fromNib];
         actionView.imageView.image = [[self class] makeRoundedImage:[UIImage imageNamed:[MixVideoViewController filters][i]] radius:30];
         actionView.layer.masksToBounds = YES;
-//        actionView.imageView.layer.cornerRadius = actionView.imageView.image.size.width/2;
+        //        actionView.imageView.layer.cornerRadius = actionView.imageView.image.size.width/2;
         actionView.label.text = [MixVideoViewController titleFilter][i];
         actionView.button.tag = i;
         [actionView.button addTarget:self action:@selector(changeFilter:) forControlEvents:UIControlEventTouchUpInside];
@@ -176,7 +179,7 @@
     _videoFilterScrollView.backgroundColor = [UIColor colorWithRed:43.0/255.0f green:41.0/255.0f blue:50.0/255.0f alpha:1];
     _selectFrameScrollView.backgroundColor = [UIColor colorWithRed:43.0/255.0f green:41.0/255.0f blue:50.0/255.0f alpha:1];
     [self clickedVideoFilterButton:nil];
-
+    
 }
 - (IBAction)clickedFramesButtons:(id)sender {
     _videoFilterScrollView.hidden = YES;
@@ -204,7 +207,7 @@
         }
     }
     [self playVideoWithFilter:[[MixVideoViewController filters] objectAtIndex:[sender tag]]];
-
+    
 }
 
 -(IBAction)changeFrame:(id)sender{
@@ -255,11 +258,13 @@
     [movieFile startProcessing];
     [_audioPlayer performSelector:@selector(play) withObject:nil afterDelay:0.2];
     _currentFilterClassString = @"GPUImageFilter";
-
+    
 }
 
 -(void)playVideoWithFilter:(NSString*)filterClassString{
+    
     _currentFilterClassString = filterClassString;
+
     _imvPlay.hidden = YES;
     _isPlaying = YES;
     if (movieFile) {
@@ -267,18 +272,27 @@
         [movieFile endProcessing];
         movieFile = nil;
     }
+    
+    if (filterMovie){
+        [filterMovie cancelProcessing];
+        [filterMovie endProcessing];
+        filterMovie = nil;
+
+    }
+    
     [_audioPlayer stop];
     NSError * audioError = nil;
-
+    
     _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:(_exportUrl)?_exportUrl:_capturePath error:&audioError];
     _audioPlayer.delegate = self;
     if (!audioError) {
         [_audioPlayer prepareToPlay];
     }
-
-    movieFile = [[GPUImageMovie alloc] initWithURL:_capturePath];
+    
+    movieFile = [[GPUImageMovie alloc] initWithURL:(_exportUrl)?_exportUrl:_capturePath];
     movieFile.playAtActualSpeed = YES;
     movieFile.shouldRepeat = NO;
+    
     if (filter) {
         [filter removeAllTargets];
         filter = nil;
@@ -287,11 +301,32 @@
     if (filter == nil) {
         return;
     }
-    [movieFile addTarget:filter];
-    GPUImageView *filterView = (GPUImageView *)self.playerView;
-    [filter addTarget:filterView];
-    [movieFile startProcessing];
+    
+    if ([filterClassString isEqualToString:@"GPUImageColorDodgeBlendFilter"]) {
+
+        NSURL *filterURL = [[NSBundle mainBundle] URLForResource:@"SwirlingColored" withExtension:@"mp4"];
+        
+        filterMovie = [[GPUImageMovie alloc] initWithURL:filterURL];
+        
+        filterMovie.playAtActualSpeed = YES;
+        
+        [movieFile addTarget:filter];
+        [filterMovie addTarget:filter];
+        
+        [filter addTarget:_playerView];
+        
+        [movieFile startProcessing];
+        [filterMovie startProcessing];
+    }
+    else{
+        
+        [movieFile addTarget:filter];
+        GPUImageView *filterView = (GPUImageView *)self.playerView;
+        [filter addTarget:filterView];
+        [movieFile startProcessing];
+    }
     [_audioPlayer performSelector:@selector(play) withObject:nil afterDelay:0.1];
+
 }
 
 
@@ -308,14 +343,14 @@
 -(void)audioSetupViewController:(AudioSetupViewController *)setupViewController didMixVideoUrl:(NSURL *)mixUrl
 {
     _exportUrl = mixUrl;
-//    _mixed = YES;
+    //    _mixed = YES;
     [self.navigationController dismissViewControllerAnimated:NO completion:^{
-//        [_videoPlayer playWithUrl:_exportUrl];
+        //        [_videoPlayer playWithUrl:_exportUrl];
     }];
 }
 
 - (void)showAudioSetup{
-
+    
     AudioSetupViewController * audioVC =  [[AudioSetupViewController alloc] initWithNibName:nil bundle:nil];
     audioVC.capturePath = _capturePath;
     audioVC.audioItem = _audioItem;
@@ -344,7 +379,7 @@
         
         picker.delegate						= self;
         picker.allowsPickingMultipleItems	= NO;
-//        picker.prompt						= NSLocalizedString (@"Add song", "Prompt in media item picker");
+        //        picker.prompt						= NSLocalizedString (@"Add song", "Prompt in media item picker");
         picker.navigationController.navigationBarHidden = YES;
         
         //    [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleDefault animated: YES];
@@ -369,7 +404,7 @@
     
     [self dismissViewControllerAnimated:YES completion:^{
         [self showAudioSetup];
-
+        
     }];
 }
 
@@ -377,9 +412,9 @@
 //		media items to play
 - (void) mediaPickerDidCancel: (MPMediaPickerController *) mediaPicker {
     
-	[self dismissViewControllerAnimated:YES completion:nil];
-	
-//	[[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleDefault animated: YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    //	[[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleDefault animated: YES];
     
 }
 
@@ -410,7 +445,7 @@
         _messageButton.selected = NO;
     }
     _enterMessageView.hidden = YES;
-
+    
     _topPosition.constant = -_enterMessageView.height;
     [self.view setNeedsUpdateConstraints];
     
@@ -485,7 +520,7 @@
     else{
         [self playVideoWithFilter:_currentFilterClassString];
     }
-
+    
 }
 
 -(void)mixVideo{
@@ -545,27 +580,27 @@
 
 -(void)upload{
     [BaseServices updateMessage:_message?_message:@""
-                   key:_mKey
-                 frame:@"1"
-                  path:_exportUrl
-          notification:_notificationButton.selected
-             scheduled:[NSString stringWithFormat:@"%f",[[_scheduleView getSelectedDate] timeIntervalSince1970]]
-               sussess:^(AFHTTPRequestOperation *operation, id responseObject) {
-                   NSDictionary* dict = (NSDictionary*)responseObject;
-                   [HMessage createByDictionary:dict];
-                   [[NSManagedObjectContext MR_defaultContext] MR_saveOnlySelfWithCompletion:nil];
-                   dispatch_async(dispatch_get_main_queue(), ^{
-                       [MBProgressHUD hideHUDForView:self.view animated:YES];
-                       [UIAlertView showMessage:@"Message sent"];
-                       [self.navigationController popToRootViewControllerAnimated:YES];
-                   });
-                   
-               } failure:^(NSString *bodyString, NSError *error) {
-                   dispatch_async(dispatch_get_main_queue(), ^{
-                       [MBProgressHUD hideHUDForView:self.view animated:YES];
-                   });
-                   _mixed = NO;
-               }];
+                            key:_mKey
+                          frame:@"1"
+                           path:_exportUrl
+                   notification:_notificationButton.selected
+                      scheduled:[NSString stringWithFormat:@"%f",[[_scheduleView getSelectedDate] timeIntervalSince1970]]
+                        sussess:^(AFHTTPRequestOperation *operation, id responseObject) {
+                            NSDictionary* dict = (NSDictionary*)responseObject;
+                            [HMessage createByDictionary:dict];
+                            [[NSManagedObjectContext MR_defaultContext] MR_saveOnlySelfWithCompletion:nil];
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                [UIAlertView showMessage:@"Message sent"];
+                                [self.navigationController popToRootViewControllerAnimated:YES];
+                            });
+                            
+                        } failure:^(NSString *bodyString, NSError *error) {
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                            });
+                            _mixed = NO;
+                        }];
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{

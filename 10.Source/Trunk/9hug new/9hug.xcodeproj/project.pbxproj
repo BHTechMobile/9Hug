@@ -232,6 +232,18 @@
 		74C6D5BC19595D81001EFBAC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74C6D5BA19595D81001EFBAC /* Model.xcdatamodeld */; };
 		74C6D5C819595E47001EFBAC /* HMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C6D5C419595E47001EFBAC /* HMessage.m */; };
 		74FE067A195F4D4800041C9F /* _HMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FE0679195F4D4800041C9F /* _HMessage.m */; };
+		8104C54C19E4ED12008E9170 /* GPUImageColorDodgeBlendFilter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8104C54A19E4ED12008E9170 /* GPUImageColorDodgeBlendFilter@2x.png */; };
+		8104C54D19E4ED12008E9170 /* GPUImageFilter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8104C54B19E4ED12008E9170 /* GPUImageFilter@2x.png */; };
+		811AF0AE19E3D2E8000CE41F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811AF0AD19E3D2E8000CE41F /* AssetsLibrary.framework */; };
+		819B13E319E534E7007013CD /* ColorfulRays.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 819B13DE19E534E7007013CD /* ColorfulRays.mp4 */; };
+		819B13E419E534E7007013CD /* GlowingRain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 819B13DF19E534E7007013CD /* GlowingRain.mp4 */; };
+		819B13E519E534E7007013CD /* NAN.mov in Resources */ = {isa = PBXBuildFile; fileRef = 819B13E019E534E7007013CD /* NAN.mov */; };
+		819B13E619E534E7007013CD /* ShootingStars.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 819B13E119E534E7007013CD /* ShootingStars.mp4 */; };
+		819B13E719E534E7007013CD /* SwirlingColored.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 819B13E219E534E7007013CD /* SwirlingColored.mp4 */; };
+		819B13EC19E5350E007013CD /* BlueAndYellowHair.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 819B13E819E5350E007013CD /* BlueAndYellowHair.mp4 */; };
+		819B13ED19E5350E007013CD /* DistanceBinary.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 819B13E919E5350E007013CD /* DistanceBinary.mp4 */; };
+		819B13EE19E5350E007013CD /* fastmovingcloud.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 819B13EA19E5350E007013CD /* fastmovingcloud.mp4 */; };
+		819B13EF19E5350E007013CD /* footagecrate.mov in Resources */ = {isa = PBXBuildFile; fileRef = 819B13EB19E5350E007013CD /* footagecrate.mov */; };
 		9F681C5A199E687200530F57 /* FacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F681C59199E687200530F57 /* FacebookManager.m */; };
 		C06894075C2244968D32CFF9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75DFBF17AF4F5B8CA888C4 /* libPods.a */; };
 		C18335BB196E3F0C007F2E12 /* btn_next_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C18335BA196E3F0C007F2E12 /* btn_next_white@2x.png */; };
@@ -625,6 +637,18 @@
 		74C6D5C419595E47001EFBAC /* HMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMessage.m; sourceTree = "<group>"; };
 		74FE0678195F4D4800041C9F /* _HMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _HMessage.h; sourceTree = "<group>"; };
 		74FE0679195F4D4800041C9F /* _HMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _HMessage.m; sourceTree = "<group>"; };
+		8104C54A19E4ED12008E9170 /* GPUImageColorDodgeBlendFilter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter@2x.png"; sourceTree = "<group>"; };
+		8104C54B19E4ED12008E9170 /* GPUImageFilter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageFilter@2x.png"; sourceTree = "<group>"; };
+		811AF0AD19E3D2E8000CE41F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		819B13DE19E534E7007013CD /* ColorfulRays.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ColorfulRays.mp4; sourceTree = "<group>"; };
+		819B13DF19E534E7007013CD /* GlowingRain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GlowingRain.mp4; sourceTree = "<group>"; };
+		819B13E019E534E7007013CD /* NAN.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = NAN.mov; sourceTree = "<group>"; };
+		819B13E119E534E7007013CD /* ShootingStars.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShootingStars.mp4; sourceTree = "<group>"; };
+		819B13E219E534E7007013CD /* SwirlingColored.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwirlingColored.mp4; sourceTree = "<group>"; };
+		819B13E819E5350E007013CD /* BlueAndYellowHair.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BlueAndYellowHair.mp4; sourceTree = "<group>"; };
+		819B13E919E5350E007013CD /* DistanceBinary.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = DistanceBinary.mp4; sourceTree = "<group>"; };
+		819B13EA19E5350E007013CD /* fastmovingcloud.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fastmovingcloud.mp4; sourceTree = "<group>"; };
+		819B13EB19E5350E007013CD /* footagecrate.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = footagecrate.mov; sourceTree = "<group>"; };
 		89B9614541AA427C82922C63 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		9F681C58199E687200530F57 /* FacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookManager.h; sourceTree = "<group>"; };
 		9F681C59199E687200530F57 /* FacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookManager.m; sourceTree = "<group>"; };
@@ -738,6 +762,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811AF0AE19E3D2E8000CE41F /* AssetsLibrary.framework in Frameworks */,
 				CE219FBC19A4537A00BCD6E5 /* GLKit.framework in Frameworks */,
 				742F987F1958497C00C9F881 /* AudioToolbox.framework in Frameworks */,
 				742F987D1958496A00C9F881 /* CoreMedia.framework in Frameworks */,
@@ -809,6 +834,8 @@
 		51218DE619CA91F30044CD33 /* ThumbFilter */ = {
 			isa = PBXGroup;
 			children = (
+				8104C54A19E4ED12008E9170 /* GPUImageColorDodgeBlendFilter@2x.png */,
+				8104C54B19E4ED12008E9170 /* GPUImageFilter@2x.png */,
 				51218E1519CABBEB0044CD33 /* GPUImageBilateralFilter@2x.png */,
 				51218DFF19CAB6E90044CD33 /* GPUImageBoxBlurFilter@2x.png */,
 				51218E0019CAB6E90044CD33 /* GPUImageBulgeDistortionFilter@2x.png */,
@@ -1120,6 +1147,7 @@
 		742F97DA1957D0F700C9F881 = {
 			isa = PBXGroup;
 			children = (
+				819B13DD19E534E7007013CD /* VideoMix */,
 				5160F1AE19C88DCB0008838C /* Lib */,
 				CED7F8F9198B6CA100CBF7CA /* Graphics */,
 				742F981B1957D1CF00C9F881 /* OtherResources */,
@@ -1143,6 +1171,7 @@
 		742F97E51957D0F700C9F881 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				811AF0AD19E3D2E8000CE41F /* AssetsLibrary.framework */,
 				CE219FBB19A4537A00BCD6E5 /* GLKit.framework */,
 				742F987E1958497C00C9F881 /* AudioToolbox.framework */,
 				742F987C1958496A00C9F881 /* CoreMedia.framework */,
@@ -1413,6 +1442,22 @@
 			path = Machine;
 			sourceTree = "<group>";
 		};
+		819B13DD19E534E7007013CD /* VideoMix */ = {
+			isa = PBXGroup;
+			children = (
+				819B13E819E5350E007013CD /* BlueAndYellowHair.mp4 */,
+				819B13E919E5350E007013CD /* DistanceBinary.mp4 */,
+				819B13EA19E5350E007013CD /* fastmovingcloud.mp4 */,
+				819B13EB19E5350E007013CD /* footagecrate.mov */,
+				819B13DE19E534E7007013CD /* ColorfulRays.mp4 */,
+				819B13DF19E534E7007013CD /* GlowingRain.mp4 */,
+				819B13E019E534E7007013CD /* NAN.mov */,
+				819B13E119E534E7007013CD /* ShootingStars.mp4 */,
+				819B13E219E534E7007013CD /* SwirlingColored.mp4 */,
+			);
+			path = VideoMix;
+			sourceTree = "<group>";
+		};
 		9F681C57199E685900530F57 /* FacebookManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1648,6 +1693,7 @@
 				CED7F959198B6CA200CBF7CA /* btn_record_camera_cyan@2x.png in Resources */,
 				CE503C80198C9CD4007945D6 /* 6_golden_flora@2x.png in Resources */,
 				51218E1419CAB6E90044CD33 /* GPUImageZoomBlurFilter@2x.png in Resources */,
+				819B13E719E534E7007013CD /* SwirlingColored.mp4 in Resources */,
 				74A293F31959C735000C1A0F /* btn_frame_white@2x.png in Resources */,
 				511EEF6B19CC296400AF1D39 /* 100.png in Resources */,
 				CED7F95F198B6CA200CBF7CA /* icon_chat_count@2x.png in Resources */,
@@ -1655,6 +1701,7 @@
 				51218E0F19CAB6E90044CD33 /* GPUImageGrayscaleFilter@2x.png in Resources */,
 				5160F22019C88DCB0008838C /* Shader.fsh in Resources */,
 				CED7F96B198B6CA200CBF7CA /* icon_user_placeholder@2x.png in Resources */,
+				819B13EC19E5350E007013CD /* BlueAndYellowHair.mp4 in Resources */,
 				742B18E51961B9F000FDD3B5 /* img_background_mixz_volume@2x.png in Resources */,
 				74A293DE19597681000C1A0F /* btn_share_white@2x.png in Resources */,
 				511FDC8519C83B2B00BCF6EB /* navigation_button_done_disabled.png in Resources */,
@@ -1668,9 +1715,11 @@
 				CED7F942198B6CA200CBF7CA /* btn_bar_public_on@2x.png in Resources */,
 				74A293C0195971A9000C1A0F /* btn_no_music_hover_bordeaux@2x.png in Resources */,
 				CE6347E7198B4D130074E7D4 /* FriendsViewController.xib in Resources */,
+				819B13ED19E5350E007013CD /* DistanceBinary.mp4 in Resources */,
 				742B18EA1961BE7C00FDD3B5 /* VolumeView.xib in Resources */,
 				CED7F94D198B6CA200CBF7CA /* btn_message_play_all@2x.png in Resources */,
 				742B18DB1960663A00FDD3B5 /* QRCodeView.xib in Resources */,
+				819B13EE19E5350E007013CD /* fastmovingcloud.mp4 in Resources */,
 				CED7F93E198B6CA200CBF7CA /* btn_bar_messages_on@2x.png in Resources */,
 				CEA8B97019DD3F7D008D5613 /* VideoFilterActionView.xib in Resources */,
 				6C573EAA198C90EC00073248 /* 1_pink_heart@2x.png in Resources */,
@@ -1709,6 +1758,7 @@
 				6C573EAD198C90EC00073248 /* 4_halloween_thumb@2x.png in Resources */,
 				CED7F940198B6CA200CBF7CA /* btn_bar_nfc_on@2x.png in Resources */,
 				516BE60019C98E2F008B8E4D /* MJPhotoBrowser.bundle in Resources */,
+				819B13E419E534E7007013CD /* GlowingRain.mp4 in Resources */,
 				6C573EAE198C90EC00073248 /* 4_halloween@2x.png in Resources */,
 				CE6347DF198B4CF70074E7D4 /* MeViewController.xib in Resources */,
 				511FDC8419C83B2B00BCF6EB /* navigation_button_done_disabled@2x.png in Resources */,
@@ -1727,6 +1777,7 @@
 				CED7F95E198B6CA200CBF7CA /* icon_calendar_on@2x.png in Resources */,
 				74A293BD195971A9000C1A0F /* btn_get_code_hover@2x.png in Resources */,
 				CED7F947198B6CA200CBF7CA /* btn_me_logout@2x.png in Resources */,
+				819B13E319E534E7007013CD /* ColorfulRays.mp4 in Resources */,
 				74A293C3195971A9000C1A0F /* btn_play_colored@2x.png in Resources */,
 				742B18D11960374000FDD3B5 /* btn_enter_code@2x.png in Resources */,
 				74A293BA195971A9000C1A0F /* btn_facebook@2x.png in Resources */,
@@ -1751,6 +1802,7 @@
 				CE503C7B198C9CD4007945D6 /* 3_butter_fly_thumb@2x.png in Resources */,
 				CED7F93F198B6CA200CBF7CA /* btn_bar_nfc_off@2x.png in Resources */,
 				2DCC0D35195C24070018177F /* profile_btn_share@2x.png in Resources */,
+				8104C54D19E4ED12008E9170 /* GPUImageFilter@2x.png in Resources */,
 				516BE64119C98F07008B8E4D /* ProgressHUD.bundle in Resources */,
 				CEDC8E3A199DAF6700A3AE06 /* btnStart@2x.png in Resources */,
 				CE503C7D198C9CD4007945D6 /* 5_floral_on_the_right_thumb@2x.png in Resources */,
@@ -1765,6 +1817,7 @@
 				74A293B9195971A9000C1A0F /* btn_add_music_hover_bordeaux@2x.png in Resources */,
 				51218E1819CAC3350044CD33 /* btn_ok_big_manual_disable@2x.png in Resources */,
 				742B18E41961B9F000FDD3B5 /* img_background_mixz_volume_hightlight@2x.png in Resources */,
+				819B13EF19E5350E007013CD /* footagecrate.mov in Resources */,
 				74A293E119597681000C1A0F /* btn_like_white@2x.png in Resources */,
 				2DCC0D31195C24070018177F /* profile_btn_comment@2x.png in Resources */,
 				511EEF6E19CC296400AF1D39 /* 144.png in Resources */,
@@ -1774,6 +1827,7 @@
 				CED7F961198B6CA200CBF7CA /* icon_frame_on@2x.png in Resources */,
 				CED7F943198B6CA200CBF7CA /* btn_camera_topheader@2x.png in Resources */,
 				5160F24719C8A4B00008838C /* microphone.png in Resources */,
+				819B13E519E534E7007013CD /* NAN.mov in Resources */,
 				74A293F21959C735000C1A0F /* btn_notification_white@2x.png in Resources */,
 				511EEF6F19CC296400AF1D39 /* 152.png in Resources */,
 				CED7F938198B6CA200CBF7CA /* btn_bar_code_on@2x.png in Resources */,
@@ -1805,6 +1859,7 @@
 				742B18E11961B90B00FDD3B5 /* wave@2x.png in Resources */,
 				CED7F964198B6CA200CBF7CA /* icon_notification@2x.png in Resources */,
 				CED7F946198B6CA200CBF7CA /* btn_me_add_photo@2x.png in Resources */,
+				8104C54C19E4ED12008E9170 /* GPUImageColorDodgeBlendFilter@2x.png in Resources */,
 				2D0EB81F195AEF390086458C /* EnterMessageView.xib in Resources */,
 				CED7F945198B6CA200CBF7CA /* btn_flash@2x.png in Resources */,
 				CED7F968198B6CA200CBF7CA /* icon_text_message@2x.png in Resources */,
@@ -1812,6 +1867,7 @@
 				CED7F93C198B6CA200CBF7CA /* btn_bar_me_on@2x.png in Resources */,
 				CED7F94E198B6CA200CBF7CA /* btn_message_play_all_on@2x.png in Resources */,
 				CED7F933198B6CA200CBF7CA /* bgr_bottom_bar_white@2x.png in Resources */,
+				819B13E619E534E7007013CD /* ShootingStars.mp4 in Resources */,
 				CE6347DA198B4CBC0074E7D4 /* CodeViewController.xib in Resources */,
 				511EEF7419CC296400AF1D39 /* 57.png in Resources */,
 				5160F23419C88DCB0008838C /* README.txt in Resources */,
@@ -2071,7 +2127,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/OtherResources/9hug-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "56149740-9159-46fb-92f8-6ab00327a2ec";
+				PROVISIONING_PROFILE = "26dff71a-9e21-4e31-a4dd-89c84d6bcd66";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2090,7 +2146,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/OtherResources/9hug-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "56149740-9159-46fb-92f8-6ab00327a2ec";
+				PROVISIONING_PROFILE = "26dff71a-9e21-4e31-a4dd-89c84d6bcd66";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
