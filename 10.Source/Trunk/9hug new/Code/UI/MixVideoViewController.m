@@ -35,8 +35,15 @@
                   @"GPUImagePinchDistortionFilter",
                   @"GPUImageSepiaFilter",
                   @"GPUImageZoomBlurFilter",
-                  @"GPUImageColorDodgeBlendFilter"
-                  
+                  @"GPUImageColorDodgeBlendFilter0",
+                  @"GPUImageColorDodgeBlendFilter1",
+                  @"GPUImageColorDodgeBlendFilter2",
+                  @"GPUImageColorDodgeBlendFilter3",
+                  @"GPUImageColorDodgeBlendFilter4",
+                  @"GPUImageColorDodgeBlendFilter5",
+                  @"GPUImageColorDodgeBlendFilter6",
+                  @"GPUImageColorDodgeBlendFilter7",
+                  @"GPUImageColorDodgeBlendFilter8"
                   ];
     });
     
@@ -61,7 +68,15 @@
                    @"Distortion",
                    @"Sepia",
                    @"Zoom Blur",
-                   @"Video Mix"
+                   @"Blue Yellow",
+                   @"Binary",
+                   @"Moving Cloud",
+                   @"Footage Crate",
+                   @"Colorful Rays",
+                   @"Rainning",
+                   @"Sky",
+                   @"Shooting Stars",
+                   @"Swrirling Colored"
                    ];
     });
     
@@ -164,9 +179,8 @@
     _videoFilterScrollView.scrollEnabled = YES;
     
     for (int i = 0;i<[MixVideoViewController filters].count;i++) {
-        
         VideoFilterActionView * actionView = [VideoFilterActionView fromNib];
-        actionView.imageView.image = [[self class] makeRoundedImage:[UIImage imageNamed:[MixVideoViewController filters][i]] radius:30];
+        actionView.imageView.image = [[self class] makeRoundedImage:[UIImage imageNamed:(i<13)?[MixVideoViewController filters][i]:@"GPUImageFilter"] radius:30];
         actionView.layer.masksToBounds = YES;
         //        actionView.imageView.layer.cornerRadius = actionView.imageView.image.size.width/2;
         actionView.label.text = [MixVideoViewController titleFilter][i];
@@ -297,14 +311,17 @@
         [filter removeAllTargets];
         filter = nil;
     }
-    filter = [[NSClassFromString(filterClassString) alloc] init];
-    if (filter == nil) {
-        return;
-    }
+ 
     
-    if ([filterClassString isEqualToString:@"GPUImageColorDodgeBlendFilter"]) {
+    NSString * subFilterClassString = [filterClassString substringToIndex:filterClassString.length -1];
+    if ([subFilterClassString isEqualToString:@"GPUImageColorDodgeBlendFilter"]) {
+        filter = [[NSClassFromString(subFilterClassString) alloc] init];
+        if (filter == nil) {
+            return;
+        }
+        NSString * videoIndex = [filterClassString substringFromIndex:filterClassString.length -1];
 
-        NSURL *filterURL = [[NSBundle mainBundle] URLForResource:@"SwirlingColored" withExtension:@"mp4"];
+        NSURL *filterURL = [[NSBundle mainBundle] URLForResource:filterClassString withExtension:(videoIndex.integerValue == 3 || videoIndex.integerValue == 6)?@"mov":@"mp4"];
         
         filterMovie = [[GPUImageMovie alloc] initWithURL:filterURL];
         
@@ -319,7 +336,10 @@
         [filterMovie startProcessing];
     }
     else{
-        
+        filter = [[NSClassFromString(_currentFilterClassString) alloc] init];
+        if (filter == nil) {
+            return;
+        }
         [movieFile addTarget:filter];
         GPUImageView *filterView = (GPUImageView *)self.playerView;
         [filter addTarget:filterView];
@@ -524,6 +544,10 @@
 }
 
 -(void)mixVideo{
+    if (_audioPlayer) {
+        [_audioPlayer stop];
+    }
+        
     dispatch_async(dispatch_get_main_queue(), ^{
         _imvPlay.hidden = YES;
         [MBProgressHUD showHUDAddedTo:self.view animated:YES :@"Mixing..."];
@@ -533,13 +557,80 @@
             [self processMixingWithStatus:status outputURLString:output];
         }];
     }
+    else if ([[_currentFilterClassString substringToIndex:_currentFilterClassString.length -1] isEqualToString:@"GPUImageColorDodgeBlendFilter"]){
+            if (movieFile) {
+            [movieFile cancelProcessing];
+            [movieFile endProcessing];
+            movieFile = nil;
+        }
+        
+        if (filterMovie){
+            [filterMovie cancelProcessing];
+            [filterMovie endProcessing];
+            filterMovie = nil;
+            
+        }
+
+        
+        movieFile = [[GPUImageMovie alloc] initWithURL:(_exportUrl)?_exportUrl:_capturePath];
+        movieFile.playAtActualSpeed = YES;
+        movieFile.shouldRepeat = NO;
+        
+        if (filter) {
+            [filter removeAllTargets];
+            filter = nil;
+        }
+        filter = [[NSClassFromString(_currentFilterClassString) alloc] init];
+        if (filter == nil) {
+            return;
+        }
+        NSString * videoIndex = [_currentFilterClassString substringFromIndex:_currentFilterClassString.length -1];
+        
+        NSURL *filterURL = [[NSBundle mainBundle] URLForResource:_currentFilterClassString withExtension:(videoIndex.integerValue == 3 || videoIndex.integerValue == 6)?@"mov":@"mp4"];
+        
+        filterMovie = [[GPUImageMovie alloc] initWithURL:filterURL];
+        
+        filterMovie.playAtActualSpeed = YES;
+        
+        [movieFile addTarget:filter];
+        [filterMovie addTarget:filter];
+        
+        NSString *pathToMovie = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/abc.m4v"];
+        unlink([pathToMovie UTF8String]);
+        NSURL *movieURL = [NSURL fileURLWithPath:pathToMovie];
+        
+        movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:movieURL size:CGSizeMake(480, 480.0)];
+        
+        [filter addTarget:movieWriter];
+        
+        movieWriter.shouldPassthroughAudio = YES;
+        movieFile.audioEncodingTarget = movieWriter;
+        [movieFile enableSynchronizedEncodingUsingMovieWriter:movieWriter];
+        
+        [movieFile startProcessing];
+        [filterMovie startProcessing];
+        [movieWriter startRecording];
+        
+        double delayInSeconds = _duration;
+        dispatch_time_t stopTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(stopTime, dispatch_get_main_queue(), ^(void){
+            [filter removeTarget:movieWriter];
+            movieFile.audioEncodingTarget = nil;
+            [movieWriter finishRecording];
+            [MixEngine mixImage:_imgFrame videoUrl:movieURL completionHandler:^(NSString *output, AVAssetExportSessionStatus status) {
+                [self processMixingWithStatus:status outputURLString:output];
+            }];
+        });
+
+        
+    }
     else{
         _videoFilterScrollView.userInteractionEnabled = NO;
         if (movieFile) {
             [movieFile endProcessing];
             movieFile = nil;
         }
-        movieFile = [[GPUImageMovie alloc] initWithURL:_exportUrl?_exportUrl:_capturePath];
+        movieFile = [[GPUImageMovie alloc] initWithURL:(_exportUrl)?_exportUrl:_capturePath];
         movieFile.playAtActualSpeed = YES;
         
         if (filter) {
@@ -575,6 +666,7 @@
                 [self processMixingWithStatus:status outputURLString:output];
             }];
         });
+
     }
 }
 
