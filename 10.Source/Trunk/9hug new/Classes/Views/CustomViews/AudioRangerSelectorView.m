@@ -7,6 +7,7 @@
 //
 
 #import "AudioRangerSelectorView.h"
+#import "UIView+Utils.h"
 
 @interface AudioRangerSelectorView ()
 
@@ -37,18 +38,21 @@
     [_rangeView addGestureRecognizer:panRecognizer];
 }
 
--(void)updateWithDuration:(float)duration
-{
+-(void)updateWithDuration:(float)duration{
     _duration = duration;
     CGFloat audioLeng = [NSUserDefaults facebookLoggedIn] ? 15:12;
     
     if (_duration < audioLeng) {
-        _rangeView.width = self.width;
+        CGRect newFrame = _rangeView.frame;
+        newFrame.size.width = self.width;
+        _rangeView.frame = newFrame;
         _rangeView.left = 0.0;
         return;
     }
     
-    _rangeView.width = (audioLeng*self.width)/duration;
+    CGRect newFrame = _rangeView.frame;
+    newFrame.size.width = (audioLeng*self.frame.size.width)/duration;;
+    _rangeView.frame = newFrame;
     _rangeView.left = 0.0;
 }
 
@@ -65,8 +69,8 @@
             old_rect.origin.x = 0;
         }
         
-        if (old_rect.origin.x >= 240-_rangeView.width) {
-            old_rect.origin.x = 240-_rangeView.width;
+        if (old_rect.origin.x >= 240-_rangeView.frame.size.width) {
+            old_rect.origin.x = 240-_rangeView.frame.size.width;
         }
         
         _rangeView.left = old_rect.origin.x;
@@ -84,6 +88,6 @@
 
 -(CGFloat)getSecondStartAt
 {
-    return (_rangeView.left*_duration)/self.width;
+    return (_rangeView.left*_duration)/self.frame.size.width;
 }
 @end

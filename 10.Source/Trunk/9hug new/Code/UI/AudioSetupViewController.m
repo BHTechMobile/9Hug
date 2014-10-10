@@ -40,29 +40,31 @@
         [_rangeSelectorView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:40];
         [_rangeSelectorView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:40];
         [_rangeSelectorView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:40];
-        [_rangeSelectorView autoSetDimension:ALDimensionHeight toSize:_rangeSelectorView.height];
-        
+        [_rangeSelectorView autoSetDimension:ALDimensionHeight toSize:_rangeSelectorView.frame.size.height];
+    
         _audioVolume = [VolumeView fromNib];
         _audioVolume.delegate =self;
         [_groupView addSubview:_audioVolume];
         [_audioVolume autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:20];
         [_audioVolume autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
         [_audioVolume autoSetDimensionsToSize:CGSizeMake(84, 112)];
-        
+    
         _videoVolume = [VolumeView fromNib];
         _videoVolume.delegate = self;
         [_groupView addSubview:_videoVolume];
         [_videoVolume autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:20];
         [_videoVolume autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
         [_videoVolume autoSetDimensionsToSize:CGSizeMake(84, 112)];
-        
-        [self.view bringSubviewToFront:_bottomView];
-        [_groupView bringSubviewToFront:_doneButton];
+    
+//        [self.view bringSubviewToFront:_bottomView];
+//        [_groupView bringSubviewToFront:_doneButton];
         _videoPlayer = [PlayerView fromNib];
         [_videoPlayer setFrame:CGRectMake(0, 0, 240, 240)];
         [_playerView insertSubview:_videoPlayer atIndex:0];
         [_videoPlayer preparePlayWithUrl:_capturePath];
         _songNamelabel.text = [_audioItem valueForProperty:MPMediaItemPropertyTitle];
+        _mixButtonTapped.hidden = NO;
+    
 }
 
 -(void)audioRangerSelectorViewValueChanged

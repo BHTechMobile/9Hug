@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -70,7 +71,6 @@
                 <constraint firstItem="dVk-8R-bx1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="89" id="v2A-ac-gRz"/>
                 <constraint firstItem="RXb-bh-tew" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="wSL-GV-IJY"/>
             </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="activeView" destination="Hix-eF-psU" id="h7p-Ls-QqQ"/>
@@ -83,9 +83,4 @@
         <image name="img_background_mixz_volume_hightlight_small.png" width="31" height="84"/>
         <image name="img_background_mixz_volume_small.png" width="31" height="84"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

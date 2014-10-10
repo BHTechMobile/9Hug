@@ -48,8 +48,8 @@
             old_rect.origin.y = 0;
         }
         
-        if (old_rect.origin.y >= self.height) {
-            old_rect.origin.y = self.height;
+        if (old_rect.origin.y >= self.frame.size.height) {
+            old_rect.origin.y = self.frame.size.height;
         }
         
         [_topSpace setConstant:old_rect.origin.y];
@@ -68,7 +68,7 @@
 
 -(CGFloat)getVolumeValue
 {
-    NSLog(@"%s %f %f",__PRETTY_FUNCTION__,_topSpace.constant,self.height);
-    return 1.0 - _topSpace.constant/self.height;
+    NSLog(@"%s %f %f",__PRETTY_FUNCTION__,_topSpace.constant,self.frame.size.height);
+    return 1.0 - _topSpace.constant/self.frame.size.height;
 }
 @end

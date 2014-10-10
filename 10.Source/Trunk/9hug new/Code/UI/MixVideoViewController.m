@@ -580,7 +580,7 @@
             [filter removeAllTargets];
             filter = nil;
         }
-        filter = [[NSClassFromString(_currentFilterClassString) alloc] init];
+        filter = [[NSClassFromString([_currentFilterClassString substringToIndex:_currentFilterClassString.length -1]) alloc] init];
         if (filter == nil) {
             return;
         }

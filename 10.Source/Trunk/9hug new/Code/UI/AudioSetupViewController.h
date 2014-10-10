@@ -29,11 +29,11 @@
 @property(nonatomic,strong) NSURL* capturePath;
 @property (weak, nonatomic) IBOutlet UIView *groupView;
 
-@property(nonatomic, strong) AudioRangerSelectorView* rangeSelectorView;
+@property(nonatomic, strong) IBOutlet AudioRangerSelectorView* rangeSelectorView;
 @property(nonatomic, strong) PlayerView* videoPlayer;
 @property(nonatomic, strong) NSURL* exportUrl;
-@property(nonatomic, strong) VolumeView* audioVolume;
-@property(nonatomic, strong) VolumeView* videoVolume;
+@property(nonatomic, strong) IBOutlet VolumeView* audioVolume;
+@property(nonatomic, strong) IBOutlet VolumeView* videoVolume;
 
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 @property (weak, nonatomic) IBOutlet UILabel *songNamelabel;
