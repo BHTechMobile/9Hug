@@ -16,9 +16,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     
-    [Crittercism enableWithAppID:@"543e3c1e0729df7748000003"];
+    [Crittercism enableWithAppID:@"543e3c1e0729df7748000003" andDelegate:self];
     
     [Crittercism beginTransaction:@"App Start"];
+    [Crittercism setMaxOfflineCrashReports:5];
     
     UIImage *navBarImage;
     navBarImage = [UIImage imageNamed:@"nav_bg"];
@@ -119,5 +120,11 @@
                   sourceApplication:sourceApplication
                         withSession:self.session];
 }
+#pragma mark- CrittercismSDK delegate
+
+- (void)crittercismDidCrashOnLastLoad{
+    [Crittercism logError:[NSError errorWithDomain:@"BHTech Mobile" code:501 userInfo:@{NSLocalizedDescriptionKey:@"App crash"}]];
+}
+
 
 @end

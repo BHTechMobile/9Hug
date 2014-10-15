@@ -16,8 +16,9 @@
 #import "NHTabbarViewController.h"
 #import "MsgController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "CrittercismDelegate.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,CrittercismDelegate>
 
 @property (strong, nonatomic) CodeViewController *codeVC;
 @property (strong, nonatomic) MeViewController *meVC;
