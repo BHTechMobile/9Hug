@@ -10,11 +10,16 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "MeViewController.h"
 #import "FacebookManager.h"
+#import "Crittercism.h"
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    
+    [Crittercism enableWithAppID:@"543e3c1e0729df7748000003"];
+    
+    [Crittercism beginTransaction:@"App Start"];
+    
     UIImage *navBarImage;
     navBarImage = [UIImage imageNamed:@"nav_bg"];
     
@@ -79,24 +84,31 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    [Crittercism endTransaction:@"App Continue"];
+    [Crittercism endTransaction:@"App Start"];
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
-//- (void)applicationDidBecomeActive:(UIApplication *)application
-//{
-//    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-//}
-//
-//- (void)applicationWillTerminate:(UIApplication *)application
-//{
-//    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-//}
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [Crittercism beginTransaction:@"App Continue"];
+
+    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+    [Crittercism endTransaction:@"App Continue"];
+    [Crittercism endTransaction:@"App Start"];
+
+    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
 
 #pragma mark - Facebook handleOpenURL
 //
@@ -107,12 +119,10 @@
 //{
 //    return [FBSession.activeSession handleOpenURL:url];
 //}
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
+- (void)applicationDidBecomeActive:(UIApplication *)application{
     [FBAppCall handleDidBecomeActiveWithSession:self.session];
 }
-- (void)applicationWillTerminate:(UIApplication *)application
-{
+- (void)applicationWillTerminate:(UIApplication *)application{
     //    [self.session close];
 }
 

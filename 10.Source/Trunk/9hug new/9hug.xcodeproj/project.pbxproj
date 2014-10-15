@@ -2168,7 +2168,7 @@
 					"$(PROJECT_DIR)/Code/Lib/CrittercismSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "26dff71a-9e21-4e31-a4dd-89c84d6bcd66";
+				PROVISIONING_PROFILE = "799cca72-07b1-4645-a7ca-d6482bfbb1d6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2180,7 +2180,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tran Vu Viet Anh (BU79S2D2W2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tran Vu Viet Anh (N2AZ5MXD3Y)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OtherResources/9hug-Prefix.pch";
@@ -2191,7 +2191,7 @@
 					"$(PROJECT_DIR)/Code/Lib/CrittercismSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "26dff71a-9e21-4e31-a4dd-89c84d6bcd66";
+				PROVISIONING_PROFILE = "9c10d03a-207d-4355-897b-8dd6fbd4a169";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
