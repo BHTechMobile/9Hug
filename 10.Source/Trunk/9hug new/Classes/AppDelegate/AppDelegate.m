@@ -98,6 +98,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     [Crittercism beginTransaction:@"App Continue"];
+    [FBAppCall handleDidBecomeActiveWithSession:self.session];
 
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
@@ -111,20 +112,6 @@
 }
 
 #pragma mark - Facebook handleOpenURL
-//
-//- (BOOL)application:(UIApplication *)application
-//            openURL:(NSURL *)url
-//  sourceApplication:(NSString *)sourceApplication
-//         annotation:(id)annotation
-//{
-//    return [FBSession.activeSession handleOpenURL:url];
-//}
-- (void)applicationDidBecomeActive:(UIApplication *)application{
-    [FBAppCall handleDidBecomeActiveWithSession:self.session];
-}
-- (void)applicationWillTerminate:(UIApplication *)application{
-    //    [self.session close];
-}
 
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
