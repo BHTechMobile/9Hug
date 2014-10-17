@@ -153,7 +153,7 @@ void dataProviderUnlockCallback (void *info, const void *data, size_t size);
             if (err)
             {
                 NSLog(@"FBO size: %f, %f", _size.width, _size.height);
-                NSAssert(NO, @"Error at CVPixelBufferCreate %d", err);
+//                NSAssert(NO, @"Error at CVPixelBufferCreate %d", err);
             }
             
             err = CVOpenGLESTextureCacheCreateTextureFromImage (kCFAllocatorDefault, coreVideoTextureCache, renderTarget,
@@ -168,7 +168,7 @@ void dataProviderUnlockCallback (void *info, const void *data, size_t size);
                                                                 &renderTexture);
             if (err)
             {
-                NSAssert(NO, @"Error at CVOpenGLESTextureCacheCreateTextureFromImage %d", err);
+//                NSAssert(NO, @"Error at CVOpenGLESTextureCacheCreateTextureFromImage %d", err);
             }
             
             CFRelease(attrs);
@@ -194,7 +194,7 @@ void dataProviderUnlockCallback (void *info, const void *data, size_t size);
         
         #ifndef NS_BLOCK_ASSERTIONS
         GLenum status = glCheckFramebufferStatus(GL_FRAMEBUFFER);
-        NSAssert(status == GL_FRAMEBUFFER_COMPLETE, @"Incomplete filter FBO: %d", status);
+//        NSAssert(status == GL_FRAMEBUFFER_COMPLETE, @"Incomplete filter FBO: %d", status);
         #endif
         
         glBindTexture(GL_TEXTURE_2D, 0);
