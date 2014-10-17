@@ -13,6 +13,8 @@
 
 @implementation MixVideoViewController{
     UIButton *buttonBack;
+    UIImageView *imageChoose;
+    
 }
 #define BG_COLOR_PROCESS [UIColor colorWithRed:224.0/255.0 green:100.0/255.0 blue:176.0/255.0 alpha:1.0]
 
@@ -98,6 +100,8 @@
     self.title = @"Mix Video";
     [self playVideoWithFilter:@"GPUImageFilter"];
     [self createUI];
+    imageChoose = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 60, 60)];
+    imageChoose.image = [UIImage imageNamed:@"GPUImageChangeClick"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -175,18 +179,18 @@
         }
     }
     
-    _videoFilterScrollView.contentSize = CGSizeMake([MixVideoViewController filters].count*60, _videoFilterScrollView.frame.size.height);
+    _videoFilterScrollView.contentSize = CGSizeMake([MixVideoViewController filters].count*60 + ([MixVideoViewController filters].count -1) *10, _videoFilterScrollView.frame.size.height);
     _videoFilterScrollView.scrollEnabled = YES;
     
     for (int i = 0;i<[MixVideoViewController filters].count;i++) {
         VideoFilterActionView * actionView = [VideoFilterActionView fromNib];
-        actionView.imageView.image = [[self class] makeRoundedImage:[UIImage imageNamed:(i<13)?[MixVideoViewController filters][i]:@"GPUImageFilter"] radius:30];
+        actionView.imageView.image = [[self class] makeRoundedImage:[UIImage imageNamed:(i<22)?[MixVideoViewController filters][i]:@"GPUImageFilter"] radius:30];
         actionView.layer.masksToBounds = YES;
         //        actionView.imageView.layer.cornerRadius = actionView.imageView.image.size.width/2;
         actionView.label.text = [MixVideoViewController titleFilter][i];
         actionView.button.tag = i;
         [actionView.button addTarget:self action:@selector(changeFilter:) forControlEvents:UIControlEventTouchUpInside];
-        actionView.frame = CGRectMake(i * 60, 0, actionView.frame.size.width, actionView.frame.size.height);
+        actionView.frame = CGRectMake(i * 70, 0, actionView.frame.size.width, actionView.frame.size.height);
         [_videoFilterScrollView addSubview:actionView];
     }
     
@@ -213,12 +217,14 @@
     NSLog(@"%s",__PRETTY_FUNCTION__);
     for (int i = 0;i<_videoFilterScrollView.subviews.count;i++) {
         if (i==[sender tag]) {
-            ((VideoFilterActionView*)_videoFilterScrollView.subviews[i]).imageView.layer.borderWidth = 3;
-            ((VideoFilterActionView*)_videoFilterScrollView.subviews[i]).imageView.layer.borderColor = [UIColor colorWithRed:69/255.0 green:187/255.0 blue:255/255.0 alpha:1.0].CGColor;
+            UIView *view = (VideoFilterActionView*)_videoFilterScrollView.subviews[i];
+            [view addSubview:imageChoose];
+//            ((VideoFilterActionView*)_videoFilterScrollView.subviews[i]).imageView.layer.borderWidth = 3;
+//            ((VideoFilterActionView*)_videoFilterScrollView.subviews[i]).imageView.layer.borderColor = [UIColor colorWithRed:69/255.0 green:187/255.0 blue:255/255.0 alpha:1.0].CGColor;
         }
-        else{
-            ((VideoFilterActionView*)_videoFilterScrollView.subviews[i]).imageView.layer.borderWidth = 0;
-        }
+//        else{
+//            ((VideoFilterActionView*)_videoFilterScrollView.subviews[i]).imageView.layer.borderWidth = 0;
+//        }
     }
     [self playVideoWithFilter:[[MixVideoViewController filters] objectAtIndex:[sender tag]]];
     
