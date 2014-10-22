@@ -269,6 +269,16 @@
 		CE6347F1198B4DAF0074E7D4 /* PublicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6347EF198B4DAF0074E7D4 /* PublicViewController.xib */; };
 		CE6347F5198B58080074E7D4 /* MessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6347F3198B58080074E7D4 /* MessageDetailViewController.m */; };
 		CE6347F6198B58080074E7D4 /* MessageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6347F4198B58080074E7D4 /* MessageDetailViewController.xib */; };
+		CE70837119F7BF9000CF3485 /* GPUImageChangeClick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE70836719F7BF9000CF3485 /* GPUImageChangeClick@2x.png */; };
+		CE70837219F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE70836819F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter0@2x.png */; };
+		CE70837319F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE70836919F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter1@2x.png */; };
+		CE70837419F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE70836A19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter2@2x.png */; };
+		CE70837519F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE70836B19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter3@2x.png */; };
+		CE70837619F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE70836C19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter4@2x.png */; };
+		CE70837719F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE70836D19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter5@2x.png */; };
+		CE70837819F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE70836E19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter6@2x.png */; };
+		CE70837919F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE70836F19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter7@2x.png */; };
+		CE70837A19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE70837019F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter8@2x.png */; };
 		CE71218119EE825A00A00DE3 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = CE71217F19EE825A00A00DE3 /* dsym_upload.sh */; };
 		CE71218219EE825A00A00DE3 /* libCrittercism_v5_0_4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71218019EE825A00A00DE3 /* libCrittercism_v5_0_4.a */; };
 		CEA8B97019DD3F7D008D5613 /* VideoFilterActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA8B96F19DD3F7D008D5613 /* VideoFilterActionView.xib */; };
@@ -683,6 +693,16 @@
 		CE6347F2198B58080074E7D4 /* MessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailViewController.h; sourceTree = "<group>"; };
 		CE6347F3198B58080074E7D4 /* MessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailViewController.m; sourceTree = "<group>"; };
 		CE6347F4198B58080074E7D4 /* MessageDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageDetailViewController.xib; sourceTree = "<group>"; };
+		CE70836719F7BF9000CF3485 /* GPUImageChangeClick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageChangeClick@2x.png"; sourceTree = "<group>"; };
+		CE70836819F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter0@2x.png"; sourceTree = "<group>"; };
+		CE70836919F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter1@2x.png"; sourceTree = "<group>"; };
+		CE70836A19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter2@2x.png"; sourceTree = "<group>"; };
+		CE70836B19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter3@2x.png"; sourceTree = "<group>"; };
+		CE70836C19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter4@2x.png"; sourceTree = "<group>"; };
+		CE70836D19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter5@2x.png"; sourceTree = "<group>"; };
+		CE70836E19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter6@2x.png"; sourceTree = "<group>"; };
+		CE70836F19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter7@2x.png"; sourceTree = "<group>"; };
+		CE70837019F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter8@2x.png"; sourceTree = "<group>"; };
 		CE71217C19EE825A00A00DE3 /* CRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRFilter.h; sourceTree = "<group>"; };
 		CE71217D19EE825A00A00DE3 /* Crittercism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crittercism.h; sourceTree = "<group>"; };
 		CE71217E19EE825A00A00DE3 /* CrittercismDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismDelegate.h; sourceTree = "<group>"; };
@@ -842,6 +862,16 @@
 		51218DE619CA91F30044CD33 /* ThumbFilter */ = {
 			isa = PBXGroup;
 			children = (
+				CE70836719F7BF9000CF3485 /* GPUImageChangeClick@2x.png */,
+				CE70836819F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter0@2x.png */,
+				CE70836919F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter1@2x.png */,
+				CE70836A19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter2@2x.png */,
+				CE70836B19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter3@2x.png */,
+				CE70836C19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter4@2x.png */,
+				CE70836D19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter5@2x.png */,
+				CE70836E19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter6@2x.png */,
+				CE70836F19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter7@2x.png */,
+				CE70837019F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter8@2x.png */,
 				8104C54A19E4ED12008E9170 /* GPUImageColorDodgeBlendFilter@2x.png */,
 				8104C54B19E4ED12008E9170 /* GPUImageFilter@2x.png */,
 				51218E1519CABBEB0044CD33 /* GPUImageBilateralFilter@2x.png */,
@@ -1716,6 +1746,7 @@
 				CED7F959198B6CA200CBF7CA /* btn_record_camera_cyan@2x.png in Resources */,
 				CE503C80198C9CD4007945D6 /* 6_golden_flora@2x.png in Resources */,
 				51218E1419CAB6E90044CD33 /* GPUImageZoomBlurFilter@2x.png in Resources */,
+				CE70837419F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter2@2x.png in Resources */,
 				819B13E719E534E7007013CD /* GPUImageColorDodgeBlendFilter8.mp4 in Resources */,
 				74A293F31959C735000C1A0F /* btn_frame_white@2x.png in Resources */,
 				511EEF6B19CC296400AF1D39 /* 100.png in Resources */,
@@ -1760,11 +1791,14 @@
 				CED7F953198B6CA200CBF7CA /* btn_mix_pause@2x.png in Resources */,
 				C18335BB196E3F0C007F2E12 /* btn_next_white@2x.png in Resources */,
 				CE6347EC198B4D920074E7D4 /* MessagesViewController.xib in Resources */,
+				CE70837819F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter6@2x.png in Resources */,
 				51218DFD19CA943A0044CD33 /* SacveImage.png in Resources */,
 				CED7F939198B6CA200CBF7CA /* btn_bar_friends@2x.png in Resources */,
 				CED7F958198B6CA200CBF7CA /* btn_next_small_grey@2x.png in Resources */,
 				2DCC0D33195C24070018177F /* profile_btn_like@2x.png in Resources */,
+				CE70837519F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter3@2x.png in Resources */,
 				6C573EA9198C90EC00073248 /* 1_pink_heart_thumb@2x.png in Resources */,
+				CE70837719F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter5@2x.png in Resources */,
 				6C573EAF198C90EC00073248 /* bgr_dashed_line@2x.png in Resources */,
 				2DCC0D30195C24070018177F /* profile_btn_camera_focus@2x.png in Resources */,
 				74A293E319597C74000C1A0F /* btn_quote@2x.png in Resources */,
@@ -1774,8 +1808,10 @@
 				6C573EB0198C90EC00073248 /* bgr_frame_select_no_frame@2x.png in Resources */,
 				74A293C4195971A9000C1A0F /* btn_play_colored_bordeaux@2x.png in Resources */,
 				CEC32C42199B716E00556994 /* CustomTabbarView.xib in Resources */,
+				CE70837619F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter4@2x.png in Resources */,
 				517BCFAB19D11F010081D570 /* SquareCamViewController.xib in Resources */,
 				6C573EAC198C90EC00073248 /* 2_blue amazing curve@2x.png in Resources */,
+				CE70837919F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter7@2x.png in Resources */,
 				74A293C7195971A9000C1A0F /* btn_send@2x.png in Resources */,
 				511EEF7719CC296400AF1D39 /* 60.png in Resources */,
 				6C573EAD198C90EC00073248 /* 4_halloween_thumb@2x.png in Resources */,
@@ -1815,6 +1851,7 @@
 				511FDC8119C83B2B00BCF6EB /* watermark_suggestion_empty@2x.png in Resources */,
 				CED7F957198B6CA200CBF7CA /* btn_nex_grey@2x.png in Resources */,
 				511FDC8319C83B2B00BCF6EB /* profile_ic_statusvoice.png in Resources */,
+				CE70837319F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter1@2x.png in Resources */,
 				511EEF7619CC296400AF1D39 /* 58.png in Resources */,
 				742B18DD19606F4200FDD3B5 /* btn_camera_select@2x.png in Resources */,
 				6C573EAB198C90EC00073248 /* 2_blue amazing curve_thumb@2x.png in Resources */,
@@ -1823,6 +1860,7 @@
 				CED7F969198B6CA200CBF7CA /* icon_text_message_on@2x.png in Resources */,
 				74A293E5195990FE000C1A0F /* btn_Record_red@2x.png in Resources */,
 				CE503C7B198C9CD4007945D6 /* 3_butter_fly_thumb@2x.png in Resources */,
+				CE70837219F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter0@2x.png in Resources */,
 				CED7F93F198B6CA200CBF7CA /* btn_bar_nfc_off@2x.png in Resources */,
 				2DCC0D35195C24070018177F /* profile_btn_share@2x.png in Resources */,
 				8104C54D19E4ED12008E9170 /* GPUImageFilter@2x.png in Resources */,
@@ -1852,6 +1890,7 @@
 				5160F24719C8A4B00008838C /* microphone.png in Resources */,
 				819B13E519E534E7007013CD /* GPUImageColorDodgeBlendFilter6.mov in Resources */,
 				74A293F21959C735000C1A0F /* btn_notification_white@2x.png in Resources */,
+				CE70837A19F7BF9000CF3485 /* GPUImageColorDodgeBlendFilter8@2x.png in Resources */,
 				511EEF6F19CC296400AF1D39 /* 152.png in Resources */,
 				CED7F938198B6CA200CBF7CA /* btn_bar_code_on@2x.png in Resources */,
 				742F98641957DB8F00C9F881 /* Default-568h@2x.png in Resources */,
@@ -1882,6 +1921,7 @@
 				742B18E11961B90B00FDD3B5 /* wave@2x.png in Resources */,
 				CED7F964198B6CA200CBF7CA /* icon_notification@2x.png in Resources */,
 				CED7F946198B6CA200CBF7CA /* btn_me_add_photo@2x.png in Resources */,
+				CE70837119F7BF9000CF3485 /* GPUImageChangeClick@2x.png in Resources */,
 				8104C54C19E4ED12008E9170 /* GPUImageColorDodgeBlendFilter@2x.png in Resources */,
 				2D0EB81F195AEF390086458C /* EnterMessageView.xib in Resources */,
 				CED7F945198B6CA200CBF7CA /* btn_flash@2x.png in Resources */,
@@ -2156,7 +2196,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tran Vu Viet Anh (BU79S2D2W2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tran Vu Viet Anh (N2AZ5MXD3Y)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2168,7 +2208,7 @@
 					"$(PROJECT_DIR)/Code/Lib/CrittercismSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "799cca72-07b1-4645-a7ca-d6482bfbb1d6";
+				PROVISIONING_PROFILE = "9c10d03a-207d-4355-897b-8dd6fbd4a169";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
