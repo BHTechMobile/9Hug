@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -17,19 +17,28 @@
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hix-eF-psU">
                     <rect key="frame" x="0.0" y="0.0" width="42" height="112"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background_mixz_volume_hightlight_small.png" translatesAutoresizingMaskIntoConstraints="NO" id="eFU-h9-mpq">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moI-H4-wWu">
                             <rect key="frame" x="0.0" y="14" width="32" height="84"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background_mixz_volume_hightlight_small.png" translatesAutoresizingMaskIntoConstraints="NO" id="LhO-2d-CzH">
+                                    <rect key="frame" x="0.0" y="0.0" width="32" height="84"/>
+                                </imageView>
+                            </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="84" id="71b-3W-vIp"/>
-                                <constraint firstAttribute="width" constant="32" id="nNW-6T-g1E"/>
+                                <constraint firstAttribute="width" constant="32" id="2YN-jO-zu2"/>
+                                <constraint firstAttribute="trailing" secondItem="LhO-2d-CzH" secondAttribute="trailing" id="QCC-5P-ep2"/>
+                                <constraint firstItem="LhO-2d-CzH" firstAttribute="leading" secondItem="moI-H4-wWu" secondAttribute="leading" id="Rtr-hU-eCz"/>
+                                <constraint firstAttribute="bottom" secondItem="LhO-2d-CzH" secondAttribute="bottom" id="a5Z-y8-Edy"/>
+                                <constraint firstItem="LhO-2d-CzH" firstAttribute="top" secondItem="moI-H4-wWu" secondAttribute="top" id="tfH-22-AxM"/>
                             </constraints>
-                        </imageView>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="eFU-h9-mpq" secondAttribute="bottom" constant="14" id="92K-io-MJw"/>
-                        <constraint firstItem="eFU-h9-mpq" firstAttribute="leading" secondItem="Hix-eF-psU" secondAttribute="leading" id="AEf-1E-oUl"/>
-                        <constraint firstAttribute="trailing" secondItem="eFU-h9-mpq" secondAttribute="trailing" constant="10" id="i27-ct-578"/>
+                        <constraint firstAttribute="bottom" secondItem="moI-H4-wWu" secondAttribute="bottom" constant="14" id="HoG-6I-sZt"/>
+                        <constraint firstItem="moI-H4-wWu" firstAttribute="leading" secondItem="Hix-eF-psU" secondAttribute="leading" id="XMK-yU-tx2"/>
+                        <constraint firstItem="moI-H4-wWu" firstAttribute="top" secondItem="Hix-eF-psU" secondAttribute="top" constant="14" id="fyi-FN-KWn"/>
+                        <constraint firstAttribute="trailing" secondItem="moI-H4-wWu" secondAttribute="trailing" constant="10" id="h1c-SM-3HO"/>
                     </constraints>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_play.png" translatesAutoresizingMaskIntoConstraints="NO" id="zYE-xf-Cfr">
@@ -71,6 +80,7 @@
                 <constraint firstItem="dVk-8R-bx1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="89" id="v2A-ac-gRz"/>
                 <constraint firstItem="RXb-bh-tew" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="wSL-GV-IJY"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="activeView" destination="Hix-eF-psU" id="h7p-Ls-QqQ"/>
@@ -83,4 +93,9 @@
         <image name="img_background_mixz_volume_hightlight_small.png" width="31" height="84"/>
         <image name="img_background_mixz_volume_small.png" width="31" height="84"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

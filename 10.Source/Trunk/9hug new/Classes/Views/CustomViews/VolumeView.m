@@ -53,13 +53,12 @@
         }
         
         [_topSpace setConstant:old_rect.origin.y];
-        
         [recognizer setTranslation:CGPointZero inView:self];
     }
     else if(recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled){
 
         [self getVolumeValue];
-        
+
         if (_delegate && [_delegate respondsToSelector:@selector(volumeView:DidValueChanged:)]) {
             [_delegate volumeView:self DidValueChanged:[self getVolumeValue]];
         }
@@ -69,6 +68,11 @@
 -(CGFloat)getVolumeValue
 {
     NSLog(@"%s %f %f",__PRETTY_FUNCTION__,_topSpace.constant,self.frame.size.height);
-    return 1.0 - _topSpace.constant/self.frame.size.height;
+    if (_topSpace.constant>84.0f) {
+        return 0.0f;
+    }
+    else{
+        return 1.0 - _topSpace.constant/84.0f;
+    }
 }
 @end
