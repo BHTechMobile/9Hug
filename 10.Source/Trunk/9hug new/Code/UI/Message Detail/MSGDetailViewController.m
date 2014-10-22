@@ -331,14 +331,14 @@
     NSString *url = [_arrayAudios objectAtIndex:index];
     NSArray *parts = [url componentsSeparatedByString:@"/"];
     NSString* fileName = [NSString stringWithFormat:@"Documents/%@",[parts objectAtIndex:[parts count]-1]];
-    NSLog(@"file name = %@",fileName);
+    NSLog(@" aaa file name = %@",fileName);
     NSString *urlOutPut2 = [NSHomeDirectory() stringByAppendingPathComponent:fileName];
     audioPlayer = nil;
     [_btnPlay setBackgroundImage:[UIImage imageNamed:@"btn_mix_play@2x"] forState:UIControlStateNormal];
     NSError *err;
     audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:urlOutPut2]
                                                          error:nil];
-    _labelTotalDuration.text = [NSString stringWithFormat:@"%@",[Utilities timeFromAudio:audioPlayer.duration]];
+//    _labelTotalDuration.text = [NSString stringWithFormat:@"%@",[Utilities timeFromAudio:audioPlayer.duration]];
     
     if (err)
     {
@@ -410,6 +410,7 @@
         [_videoPlayer pause];
     }
     [audioPlayer play];
+    NSLog(@"time 1 = %f",audioPlayer.duration);
     [self handleStatusPlayAllButtonOn];
 }
 
@@ -429,15 +430,14 @@
 
 - (void)createRecordTimer{
     recordTimmer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(recordStart) userInfo:nil repeats:YES];
+    
+    
 }
 
 -(void)recordStart{
-    [_labelCurrentRecord setText:[Utilities timeFromAudio:(floorf)(_audioRecorder.currentTime)]];
-}
-
-- (void)vibrate {
-    NSLog(@"rung");
-    AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);
+//    [_labelCurrentRecord setText:[Utilities timeFromAudio:(floorf)(_audioRecorder.currentTime)]];
+    [_labelCurrentRecord setText:[Utilities timeFromAudio:(_audioRecorder.currentTime)]];    
+    
 }
 
 - (void)hideRecordView{
@@ -463,7 +463,6 @@
     CGRect fRecord = _viewRecord.frame;
     [_viewRecord.layer setCornerRadius:5.0f];
     [_viewRecord.layer setMasksToBounds:YES];
-    [self vibrate];
     
     fRecord.origin.y = (CGRectGetHeight(self.view.frame) - CGRectGetHeight(_viewRecord.frame))/2;
     [_viewRecord setFrame:fRecord];
@@ -665,7 +664,8 @@
 -(void)tick{
     [self setFrameCurrentAudio:(audioPlayer.currentTime*1.0)/(1.0*audioPlayer.duration)*CGRectGetWidth(self.processViewAudio.frame)];
     _labelCurrentDuration.text = [Utilities timeFromAudio:audioPlayer.currentTime];
-    
+    _labelTotalDuration.text = [NSString stringWithFormat:@"%@",[Utilities timeFromAudio:audioPlayer.duration]];
+
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{

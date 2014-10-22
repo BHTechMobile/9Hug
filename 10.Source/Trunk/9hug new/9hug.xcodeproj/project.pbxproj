@@ -232,7 +232,6 @@
 		74C6D5BC19595D81001EFBAC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74C6D5BA19595D81001EFBAC /* Model.xcdatamodeld */; };
 		74C6D5C819595E47001EFBAC /* HMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C6D5C419595E47001EFBAC /* HMessage.m */; };
 		74FE067A195F4D4800041C9F /* _HMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FE0679195F4D4800041C9F /* _HMessage.m */; };
-		8104C54C19E4ED12008E9170 /* GPUImageColorDodgeBlendFilter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8104C54A19E4ED12008E9170 /* GPUImageColorDodgeBlendFilter@2x.png */; };
 		8104C54D19E4ED12008E9170 /* GPUImageFilter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8104C54B19E4ED12008E9170 /* GPUImageFilter@2x.png */; };
 		811AF0AE19E3D2E8000CE41F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811AF0AD19E3D2E8000CE41F /* AssetsLibrary.framework */; };
 		819B13E319E534E7007013CD /* GPUImageColorDodgeBlendFilter4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 819B13DE19E534E7007013CD /* GPUImageColorDodgeBlendFilter4.mp4 */; };
@@ -244,6 +243,16 @@
 		819B13ED19E5350E007013CD /* GPUImageColorDodgeBlendFilter1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 819B13E919E5350E007013CD /* GPUImageColorDodgeBlendFilter1.mp4 */; };
 		819B13EE19E5350E007013CD /* GPUImageColorDodgeBlendFilter2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 819B13EA19E5350E007013CD /* GPUImageColorDodgeBlendFilter2.mp4 */; };
 		819B13EF19E5350E007013CD /* GPUImageColorDodgeBlendFilter3.mov in Resources */ = {isa = PBXBuildFile; fileRef = 819B13EB19E5350E007013CD /* GPUImageColorDodgeBlendFilter3.mov */; };
+		81BEF16919F64174007F4A27 /* GPUImageChangeClick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BEF15F19F64174007F4A27 /* GPUImageChangeClick@2x.png */; };
+		81BEF16A19F64174007F4A27 /* GPUImageColorDodgeBlendFilter0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BEF16019F64174007F4A27 /* GPUImageColorDodgeBlendFilter0@2x.png */; };
+		81BEF16B19F64174007F4A27 /* GPUImageColorDodgeBlendFilter1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BEF16119F64174007F4A27 /* GPUImageColorDodgeBlendFilter1@2x.png */; };
+		81BEF16C19F64174007F4A27 /* GPUImageColorDodgeBlendFilter2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BEF16219F64174007F4A27 /* GPUImageColorDodgeBlendFilter2@2x.png */; };
+		81BEF16D19F64174007F4A27 /* GPUImageColorDodgeBlendFilter3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BEF16319F64174007F4A27 /* GPUImageColorDodgeBlendFilter3@2x.png */; };
+		81BEF16E19F64174007F4A27 /* GPUImageColorDodgeBlendFilter4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BEF16419F64174007F4A27 /* GPUImageColorDodgeBlendFilter4@2x.png */; };
+		81BEF16F19F64174007F4A27 /* GPUImageColorDodgeBlendFilter5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BEF16519F64174007F4A27 /* GPUImageColorDodgeBlendFilter5@2x.png */; };
+		81BEF17019F64174007F4A27 /* GPUImageColorDodgeBlendFilter6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BEF16619F64174007F4A27 /* GPUImageColorDodgeBlendFilter6@2x.png */; };
+		81BEF17119F64174007F4A27 /* GPUImageColorDodgeBlendFilter7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BEF16719F64174007F4A27 /* GPUImageColorDodgeBlendFilter7@2x.png */; };
+		81BEF17219F64174007F4A27 /* GPUImageColorDodgeBlendFilter8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BEF16819F64174007F4A27 /* GPUImageColorDodgeBlendFilter8@2x.png */; };
 		9F681C5A199E687200530F57 /* FacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F681C59199E687200530F57 /* FacebookManager.m */; };
 		C06894075C2244968D32CFF9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75DFBF17AF4F5B8CA888C4 /* libPods.a */; };
 		C18335BB196E3F0C007F2E12 /* btn_next_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C18335BA196E3F0C007F2E12 /* btn_next_white@2x.png */; };
@@ -639,7 +648,6 @@
 		74C6D5C419595E47001EFBAC /* HMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMessage.m; sourceTree = "<group>"; };
 		74FE0678195F4D4800041C9F /* _HMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _HMessage.h; sourceTree = "<group>"; };
 		74FE0679195F4D4800041C9F /* _HMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _HMessage.m; sourceTree = "<group>"; };
-		8104C54A19E4ED12008E9170 /* GPUImageColorDodgeBlendFilter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter@2x.png"; sourceTree = "<group>"; };
 		8104C54B19E4ED12008E9170 /* GPUImageFilter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageFilter@2x.png"; sourceTree = "<group>"; };
 		811AF0AD19E3D2E8000CE41F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		819B13DE19E534E7007013CD /* GPUImageColorDodgeBlendFilter4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GPUImageColorDodgeBlendFilter4.mp4; sourceTree = "<group>"; };
@@ -651,6 +659,16 @@
 		819B13E919E5350E007013CD /* GPUImageColorDodgeBlendFilter1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GPUImageColorDodgeBlendFilter1.mp4; sourceTree = "<group>"; };
 		819B13EA19E5350E007013CD /* GPUImageColorDodgeBlendFilter2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GPUImageColorDodgeBlendFilter2.mp4; sourceTree = "<group>"; };
 		819B13EB19E5350E007013CD /* GPUImageColorDodgeBlendFilter3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = GPUImageColorDodgeBlendFilter3.mov; sourceTree = "<group>"; };
+		81BEF15F19F64174007F4A27 /* GPUImageChangeClick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageChangeClick@2x.png"; sourceTree = "<group>"; };
+		81BEF16019F64174007F4A27 /* GPUImageColorDodgeBlendFilter0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter0@2x.png"; sourceTree = "<group>"; };
+		81BEF16119F64174007F4A27 /* GPUImageColorDodgeBlendFilter1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter1@2x.png"; sourceTree = "<group>"; };
+		81BEF16219F64174007F4A27 /* GPUImageColorDodgeBlendFilter2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter2@2x.png"; sourceTree = "<group>"; };
+		81BEF16319F64174007F4A27 /* GPUImageColorDodgeBlendFilter3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter3@2x.png"; sourceTree = "<group>"; };
+		81BEF16419F64174007F4A27 /* GPUImageColorDodgeBlendFilter4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter4@2x.png"; sourceTree = "<group>"; };
+		81BEF16519F64174007F4A27 /* GPUImageColorDodgeBlendFilter5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter5@2x.png"; sourceTree = "<group>"; };
+		81BEF16619F64174007F4A27 /* GPUImageColorDodgeBlendFilter6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter6@2x.png"; sourceTree = "<group>"; };
+		81BEF16719F64174007F4A27 /* GPUImageColorDodgeBlendFilter7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter7@2x.png"; sourceTree = "<group>"; };
+		81BEF16819F64174007F4A27 /* GPUImageColorDodgeBlendFilter8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GPUImageColorDodgeBlendFilter8@2x.png"; sourceTree = "<group>"; };
 		89B9614541AA427C82922C63 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		9F681C58199E687200530F57 /* FacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookManager.h; sourceTree = "<group>"; };
 		9F681C59199E687200530F57 /* FacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookManager.m; sourceTree = "<group>"; };
@@ -842,7 +860,16 @@
 		51218DE619CA91F30044CD33 /* ThumbFilter */ = {
 			isa = PBXGroup;
 			children = (
-				8104C54A19E4ED12008E9170 /* GPUImageColorDodgeBlendFilter@2x.png */,
+				81BEF15F19F64174007F4A27 /* GPUImageChangeClick@2x.png */,
+				81BEF16019F64174007F4A27 /* GPUImageColorDodgeBlendFilter0@2x.png */,
+				81BEF16119F64174007F4A27 /* GPUImageColorDodgeBlendFilter1@2x.png */,
+				81BEF16219F64174007F4A27 /* GPUImageColorDodgeBlendFilter2@2x.png */,
+				81BEF16319F64174007F4A27 /* GPUImageColorDodgeBlendFilter3@2x.png */,
+				81BEF16419F64174007F4A27 /* GPUImageColorDodgeBlendFilter4@2x.png */,
+				81BEF16519F64174007F4A27 /* GPUImageColorDodgeBlendFilter5@2x.png */,
+				81BEF16619F64174007F4A27 /* GPUImageColorDodgeBlendFilter6@2x.png */,
+				81BEF16719F64174007F4A27 /* GPUImageColorDodgeBlendFilter7@2x.png */,
+				81BEF16819F64174007F4A27 /* GPUImageColorDodgeBlendFilter8@2x.png */,
 				8104C54B19E4ED12008E9170 /* GPUImageFilter@2x.png */,
 				51218E1519CABBEB0044CD33 /* GPUImageBilateralFilter@2x.png */,
 				51218DFF19CAB6E90044CD33 /* GPUImageBoxBlurFilter@2x.png */,
@@ -1698,6 +1725,7 @@
 			files = (
 				6C573E63198C19DC00073248 /* MsgView.xib in Resources */,
 				CEBB7B9C19AB501000DD243A /* btn_mix_filter_untouch_button@2x.png in Resources */,
+				81BEF16D19F64174007F4A27 /* GPUImageColorDodgeBlendFilter3@2x.png in Resources */,
 				6C573EE3198C910000073248 /* CaptureVideoViewController.xib in Resources */,
 				5160F24619C8A4B00008838C /* mic_talk_358x358@2x.png in Resources */,
 				C1DEF688196E87B800F50F74 /* Images.xcassets in Resources */,
@@ -1709,6 +1737,7 @@
 				51218E1619CABBEB0044CD33 /* GPUImageBilateralFilter@2x.png in Resources */,
 				74A293C5195971A9000C1A0F /* btn_play_hover_bordeaux@2x.png in Resources */,
 				511EEF7919CC296400AF1D39 /* 76.png in Resources */,
+				81BEF16E19F64174007F4A27 /* GPUImageColorDodgeBlendFilter4@2x.png in Resources */,
 				CED7F95A198B6CA200CBF7CA /* btn_record_camera_red@2x.png in Resources */,
 				511FDC8219C83B2B00BCF6EB /* profile_ic_statusvoice@2x.png in Resources */,
 				CED7F948198B6CA200CBF7CA /* btn_me_status@2x.png in Resources */,
@@ -1720,6 +1749,7 @@
 				74A293F31959C735000C1A0F /* btn_frame_white@2x.png in Resources */,
 				511EEF6B19CC296400AF1D39 /* 100.png in Resources */,
 				CED7F95F198B6CA200CBF7CA /* icon_chat_count@2x.png in Resources */,
+				81BEF17019F64174007F4A27 /* GPUImageColorDodgeBlendFilter6@2x.png in Resources */,
 				CED7F967198B6CA200CBF7CA /* icon_tag_on@2x.png in Resources */,
 				51218E0F19CAB6E90044CD33 /* GPUImageGrayscaleFilter@2x.png in Resources */,
 				5160F22019C88DCB0008838C /* Shader.fsh in Resources */,
@@ -1734,6 +1764,7 @@
 				74A293C8195971A9000C1A0F /* btn_send_hover@2x.png in Resources */,
 				74A293F11959C735000C1A0F /* btn_calendar_white@2x.png in Resources */,
 				51218E1019CAB6E90044CD33 /* GPUImageMissEtikateFilter@2x.png in Resources */,
+				81BEF16A19F64174007F4A27 /* GPUImageColorDodgeBlendFilter0@2x.png in Resources */,
 				CED7F93A198B6CA200CBF7CA /* btn_bar_friends_on@2x.png in Resources */,
 				CED7F942198B6CA200CBF7CA /* btn_bar_public_on@2x.png in Resources */,
 				74A293C0195971A9000C1A0F /* btn_no_music_hover_bordeaux@2x.png in Resources */,
@@ -1776,6 +1807,7 @@
 				CEC32C42199B716E00556994 /* CustomTabbarView.xib in Resources */,
 				517BCFAB19D11F010081D570 /* SquareCamViewController.xib in Resources */,
 				6C573EAC198C90EC00073248 /* 2_blue amazing curve@2x.png in Resources */,
+				81BEF16B19F64174007F4A27 /* GPUImageColorDodgeBlendFilter1@2x.png in Resources */,
 				74A293C7195971A9000C1A0F /* btn_send@2x.png in Resources */,
 				511EEF7719CC296400AF1D39 /* 60.png in Resources */,
 				6C573EAD198C90EC00073248 /* 4_halloween_thumb@2x.png in Resources */,
@@ -1788,6 +1820,7 @@
 				511EEF7A19CC296400AF1D39 /* 80-1.png in Resources */,
 				74A293F41959C735000C1A0F /* btn_chat_white@2x.png in Resources */,
 				CED7F941198B6CA200CBF7CA /* btn_bar_public@2x.png in Resources */,
+				81BEF16F19F64174007F4A27 /* GPUImageColorDodgeBlendFilter5@2x.png in Resources */,
 				742B18D61960487300FDD3B5 /* DownloadVideoView.xib in Resources */,
 				74A293C9195971A9000C1A0F /* btn_send_small@2x.png in Resources */,
 				6C573EF4198C910000073248 /* MixVideoViewController.xib in Resources */,
@@ -1851,6 +1884,7 @@
 				CED7F943198B6CA200CBF7CA /* btn_camera_topheader@2x.png in Resources */,
 				5160F24719C8A4B00008838C /* microphone.png in Resources */,
 				819B13E519E534E7007013CD /* GPUImageColorDodgeBlendFilter6.mov in Resources */,
+				81BEF17119F64174007F4A27 /* GPUImageColorDodgeBlendFilter7@2x.png in Resources */,
 				74A293F21959C735000C1A0F /* btn_notification_white@2x.png in Resources */,
 				511EEF6F19CC296400AF1D39 /* 152.png in Resources */,
 				CED7F938198B6CA200CBF7CA /* btn_bar_code_on@2x.png in Resources */,
@@ -1873,6 +1907,7 @@
 				CED7F95B198B6CA200CBF7CA /* btn_voice_record@2x.png in Resources */,
 				74A293A419596B26000C1A0F /* PlayerView.xib in Resources */,
 				CED7F956198B6CA200CBF7CA /* btn_nex_cyan@2x.png in Resources */,
+				81BEF16919F64174007F4A27 /* GPUImageChangeClick@2x.png in Resources */,
 				CED7F954198B6CA200CBF7CA /* btn_mix_photo_placeholder@2x.png in Resources */,
 				2DCC0D36195C24070018177F /* profile_btn_share_on@2x.png in Resources */,
 				CE6347F6198B58080074E7D4 /* MessageDetailViewController.xib in Resources */,
@@ -1882,7 +1917,6 @@
 				742B18E11961B90B00FDD3B5 /* wave@2x.png in Resources */,
 				CED7F964198B6CA200CBF7CA /* icon_notification@2x.png in Resources */,
 				CED7F946198B6CA200CBF7CA /* btn_me_add_photo@2x.png in Resources */,
-				8104C54C19E4ED12008E9170 /* GPUImageColorDodgeBlendFilter@2x.png in Resources */,
 				2D0EB81F195AEF390086458C /* EnterMessageView.xib in Resources */,
 				CED7F945198B6CA200CBF7CA /* btn_flash@2x.png in Resources */,
 				CED7F968198B6CA200CBF7CA /* icon_text_message@2x.png in Resources */,
@@ -1903,7 +1937,9 @@
 				51218E0D19CAB6E90044CD33 /* GPUImageGaussianBlurPositionFilter@2x.png in Resources */,
 				CED7F963198B6CA200CBF7CA /* icon_message_quote@2x.png in Resources */,
 				CED7F951198B6CA200CBF7CA /* btn_message_video_play_center@2x.png in Resources */,
+				81BEF17219F64174007F4A27 /* GPUImageColorDodgeBlendFilter8@2x.png in Resources */,
 				6C573EB2198C90EC00073248 /* btn_record_slider@2x.png in Resources */,
+				81BEF16C19F64174007F4A27 /* GPUImageColorDodgeBlendFilter2@2x.png in Resources */,
 				2DCC0D2D195C24070018177F /* profile_btn_box@2x.png in Resources */,
 				6C573E68198C1AD400073248 /* MSGDetailViewController.xib in Resources */,
 				74A293DF19597681000C1A0F /* btn_view_qrcode_white@2x.png in Resources */,
@@ -1962,16 +1998,16 @@
 		};
 		CE71218319EE827600A00DE3 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "APP_ID=\"543e3c1e0729df7748000003\"\nAPI_KEY=\"t5Y9jmU1IbN5gFp04d0vrJVVTHOUliRi\"\nsource \"${SRCROOT}\"/Code/Lib/CrittercismSDK/dsym_upload.sh";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2168,7 +2204,7 @@
 					"$(PROJECT_DIR)/Code/Lib/CrittercismSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "799cca72-07b1-4645-a7ca-d6482bfbb1d6";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2191,7 +2227,7 @@
 					"$(PROJECT_DIR)/Code/Lib/CrittercismSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9c10d03a-207d-4355-897b-8dd6fbd4a169";
+				PROVISIONING_PROFILE = "26dff71a-9e21-4e31-a4dd-89c84d6bcd66";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
