@@ -117,17 +117,21 @@
     [alert show];
 }
 
-+ (NSString*)timeFromAudio:(float)value{
++ (NSString*)timeFromAudio:(NSTimeInterval)value{
     
-    float minutes = floor(lroundf(value)/60);
-    float seconds = lroundf((value) - (minutes * 60));
+//    float minutes = floor(lroundf(value)/60);
+//    float seconds = lroundf((value) - (minutes * 60));
+//    
+//    int roundedSeconds = lroundf(seconds);
+//    int roundedMinutes = lroundf(minutes);
     
-    int roundedSeconds = lroundf(seconds);
-    int roundedMinutes = lroundf(minutes);
+    int seconds = (int)value % 60;
+    int minutes = value / 60;
+    
     
     NSString *time = [[NSString alloc]
                       initWithFormat:@"%d:%02d",
-                      roundedMinutes, roundedSeconds];
+                      minutes, seconds];
     return time;
 }
 

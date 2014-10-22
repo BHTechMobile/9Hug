@@ -16,7 +16,7 @@
 + (UIImage *)imageWithColor:(UIColor *)color;
 + (UIView *)viewSpace :(float)pointX;
 + (void)setBorderForView:(UIView *)view;
-+ (NSString*)timeFromAudio:(float)value;
++ (NSString*)timeFromAudio:(NSTimeInterval)value;
 + (UIImage *)imageWithImage:(UIImage *)image scaledToFillSize:(CGSize)size;
 + (CGFloat)getTextHeight :(UITextView *)m_pDesTextView;
 + (NSArray *)findFiles:(NSString *)extension;
