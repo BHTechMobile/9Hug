@@ -127,6 +127,8 @@ completionHandler:(MixResponse)response
     
     NSMutableArray *inputParams = [NSMutableArray arrayWithCapacity:2];
     
+    NSString *random = [NSString generateRandomString:8];
+    
     // add audio
     AVMutableCompositionTrack *compositionAudioTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeAudio
                                                                                    preferredTrackID:kCMPersistentTrackID_Invalid];
@@ -170,9 +172,18 @@ completionHandler:(MixResponse)response
     AVAssetExportSession* _assetExport = [[AVAssetExportSession alloc] initWithAsset:mixComposition
                                                                           presetName:AVAssetExportPresetHighestQuality];
     
-    NSString *exportPath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp4",[NSString generateRandomString:8]]];
+    NSString *exportPath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp4",random]];
     NSURL* exportUrl = [NSURL fileURLWithPath:exportPath];
+    NSString * videoName = [NSString stringWithFormat:@"%@.mp4",random];
+    NSUserDefaults *urlDefaults = [NSUserDefaults standardUserDefaults];
+ 
     
+    [[NSFileManager defaultManager] removeItemAtPath:[urlDefaults objectForKey:@"urlVideo"] error:nil];
+//    [urlDefaults removeObjectForKey:@"urlVideo"];
+
+    [urlDefaults setObject:exportPath forKey:@"urlVideo"];
+    [urlDefaults synchronize];
+
     _assetExport.outputFileType = AVFileTypeMPEG4;
     _assetExport.outputURL = exportUrl;
     _assetExport.shouldOptimizeForNetworkUse = YES;
@@ -196,6 +207,7 @@ completionHandler:(MixResponse)response
             }
         });
     }];
+    
 }
 
 +(void)mixImage:(UIImage*)image videoUrl:(NSURL*)videoUrl completionHandler:(MixResponse)response
