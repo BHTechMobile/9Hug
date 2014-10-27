@@ -66,8 +66,8 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [APP_DELEGATE.tabbar hideMe];
     [APP_DELEGATE.tabbar showMe];
-
 }
 
 - (void)didReceiveMemoryWarning
