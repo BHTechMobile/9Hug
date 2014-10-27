@@ -39,7 +39,7 @@
 }
 
 - (void)showMoreTapped{
-    
+    [_delegate showMoreTapped];
 }
 
 - (void)addMessageTapped{
