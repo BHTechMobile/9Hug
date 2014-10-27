@@ -257,6 +257,7 @@
 		CE503C80198C9CD4007945D6 /* 6_golden_flora@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE503C78198C9CD4007945D6 /* 6_golden_flora@2x.png */; };
 		CE503C81198C9CD4007945D6 /* 7_daisies_yellow_thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE503C79198C9CD4007945D6 /* 7_daisies_yellow_thumb@2x.png */; };
 		CE503C82198C9CD4007945D6 /* 7_daisies_yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE503C7A198C9CD4007945D6 /* 7_daisies_yellow@2x.png */; };
+		CE5BAD0619FDEE5800AB85D9 /* _hug_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5BAD0519FDEE5800AB85D9 /* _hug_Tests.m */; };
 		CE6347D9198B4CBC0074E7D4 /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6347D7198B4CBC0074E7D4 /* CodeViewController.m */; };
 		CE6347DA198B4CBC0074E7D4 /* CodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6347D8198B4CBC0074E7D4 /* CodeViewController.xib */; };
 		CE6347DE198B4CF70074E7D4 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6347DC198B4CF70074E7D4 /* MeViewController.m */; };
@@ -350,6 +351,16 @@
 		CEDC8E3C199DB53600A3AE06 /* nav_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC8E3B199DB53600A3AE06 /* nav_bg@2x.png */; };
 		CEDC8E42199DB8DE00A3AE06 /* BaseServices.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC8E41199DB8DE00A3AE06 /* BaseServices.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE5BAD0719FDEE5800AB85D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 742F97DB1957D0F700C9F881 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 742F97E21957D0F700C9F881;
+			remoteInfo = 9hug;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2D0EB818195AE3F10086458C /* EnterMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterMessageView.h; sourceTree = "<group>"; };
@@ -675,6 +686,9 @@
 		CE503C78198C9CD4007945D6 /* 6_golden_flora@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6_golden_flora@2x.png"; sourceTree = "<group>"; };
 		CE503C79198C9CD4007945D6 /* 7_daisies_yellow_thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7_daisies_yellow_thumb@2x.png"; sourceTree = "<group>"; };
 		CE503C7A198C9CD4007945D6 /* 7_daisies_yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7_daisies_yellow@2x.png"; sourceTree = "<group>"; };
+		CE5BAD0119FDEE5800AB85D9 /* 9hug Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "9hug Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5BAD0419FDEE5800AB85D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE5BAD0519FDEE5800AB85D9 /* _hug_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _hug_Tests.m; sourceTree = "<group>"; };
 		CE6347D6198B4CBC0074E7D4 /* CodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeViewController.h; sourceTree = "<group>"; };
 		CE6347D7198B4CBC0074E7D4 /* CodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeViewController.m; sourceTree = "<group>"; };
 		CE6347D8198B4CBC0074E7D4 /* CodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CodeViewController.xib; sourceTree = "<group>"; };
@@ -801,6 +815,13 @@
 				742F97E71957D0F700C9F881 /* Foundation.framework in Frameworks */,
 				CE71218219EE825A00A00DE3 /* libCrittercism_v5_0_4.a in Frameworks */,
 				C06894075C2244968D32CFF9 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5BACFE19FDEE5800AB85D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1193,6 +1214,7 @@
 				742F981F1957D1CF00C9F881 /* Classes */,
 				742F982D1957D1CF00C9F881 /* External */,
 				742F982E1957D1CF00C9F881 /* Resources */,
+				CE5BAD0219FDEE5800AB85D9 /* 9hug Tests */,
 				742F97E51957D0F700C9F881 /* Frameworks */,
 				742F97E41957D0F700C9F881 /* Products */,
 				89B9614541AA427C82922C63 /* Pods.xcconfig */,
@@ -1203,6 +1225,7 @@
 			isa = PBXGroup;
 			children = (
 				742F97E31957D0F700C9F881 /* 9hug.app */,
+				CE5BAD0119FDEE5800AB85D9 /* 9hug Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1506,6 +1529,23 @@
 			name = FacebookManager;
 			sourceTree = "<group>";
 		};
+		CE5BAD0219FDEE5800AB85D9 /* 9hug Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CE5BAD0519FDEE5800AB85D9 /* _hug_Tests.m */,
+				CE5BAD0319FDEE5800AB85D9 /* Supporting Files */,
+			);
+			path = "9hug Tests";
+			sourceTree = "<group>";
+		};
+		CE5BAD0319FDEE5800AB85D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE5BAD0419FDEE5800AB85D9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		CE6347D5198B4CBC0074E7D4 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -1688,6 +1728,24 @@
 			productReference = 742F97E31957D0F700C9F881 /* 9hug.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CE5BAD0019FDEE5800AB85D9 /* 9hug Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE5BAD0919FDEE5800AB85D9 /* Build configuration list for PBXNativeTarget "9hug Tests" */;
+			buildPhases = (
+				CE5BACFD19FDEE5800AB85D9 /* Sources */,
+				CE5BACFE19FDEE5800AB85D9 /* Frameworks */,
+				CE5BACFF19FDEE5800AB85D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE5BAD0819FDEE5800AB85D9 /* PBXTargetDependency */,
+			);
+			name = "9hug Tests";
+			productName = "9hug Tests";
+			productReference = CE5BAD0119FDEE5800AB85D9 /* 9hug Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1699,6 +1757,10 @@
 				TargetAttributes = {
 					742F97E21957D0F700C9F881 = {
 						DevelopmentTeam = RHWVARR87L;
+					};
+					CE5BAD0019FDEE5800AB85D9 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 742F97E21957D0F700C9F881;
 					};
 				};
 			};
@@ -1717,6 +1779,7 @@
 			targets = (
 				742F97E21957D0F700C9F881 /* 9hug */,
 				74C6D5BD19595E1F001EFBAC /* Mogenerator */,
+				CE5BAD0019FDEE5800AB85D9 /* 9hug Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -1954,6 +2017,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE5BACFF19FDEE5800AB85D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -2011,7 +2081,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "APP_ID=\"543e3c1e0729df7748000003\"\nAPI_KEY=\"t5Y9jmU1IbN5gFp04d0vrJVVTHOUliRi\"\nsource \"${SRCROOT}\"/Code/Lib/CrittercismSDK/dsym_upload.sh";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2114,7 +2184,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE5BACFD19FDEE5800AB85D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5BAD0619FDEE5800AB85D9 /* _hug_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE5BAD0819FDEE5800AB85D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 742F97E21957D0F700C9F881 /* 9hug */;
+			targetProxy = CE5BAD0719FDEE5800AB85D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		742F98131957D0F700C9F881 /* Debug */ = {
@@ -2250,6 +2336,48 @@
 			};
 			name = Release;
 		};
+		CE5BAD0A19FDEE5800AB85D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "9hug Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/9hug.app/9hug";
+			};
+			name = Debug;
+		};
+		CE5BAD0B19FDEE5800AB85D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "9hug Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/9hug.app/9hug";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2279,6 +2407,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		CE5BAD0919FDEE5800AB85D9 /* Build configuration list for PBXNativeTarget "9hug Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE5BAD0A19FDEE5800AB85D9 /* Debug */,
+				CE5BAD0B19FDEE5800AB85D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
