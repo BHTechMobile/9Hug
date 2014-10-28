@@ -258,6 +258,7 @@
 		CE503C81198C9CD4007945D6 /* 7_daisies_yellow_thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE503C79198C9CD4007945D6 /* 7_daisies_yellow_thumb@2x.png */; };
 		CE503C82198C9CD4007945D6 /* 7_daisies_yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE503C7A198C9CD4007945D6 /* 7_daisies_yellow@2x.png */; };
 		CE5BAD0619FDEE5800AB85D9 /* _hug_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5BAD0519FDEE5800AB85D9 /* _hug_Tests.m */; };
+		CE5BAD0E19FDFA4300AB85D9 /* ExampleTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5BAD0D19FDFA4300AB85D9 /* ExampleTestCase.m */; };
 		CE6347D9198B4CBC0074E7D4 /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6347D7198B4CBC0074E7D4 /* CodeViewController.m */; };
 		CE6347DA198B4CBC0074E7D4 /* CodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6347D8198B4CBC0074E7D4 /* CodeViewController.xib */; };
 		CE6347DE198B4CF70074E7D4 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6347DC198B4CF70074E7D4 /* MeViewController.m */; };
@@ -689,6 +690,7 @@
 		CE5BAD0119FDEE5800AB85D9 /* 9hug Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "9hug Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5BAD0419FDEE5800AB85D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE5BAD0519FDEE5800AB85D9 /* _hug_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _hug_Tests.m; sourceTree = "<group>"; };
+		CE5BAD0D19FDFA4300AB85D9 /* ExampleTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTestCase.m; sourceTree = "<group>"; };
 		CE6347D6198B4CBC0074E7D4 /* CodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeViewController.h; sourceTree = "<group>"; };
 		CE6347D7198B4CBC0074E7D4 /* CodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeViewController.m; sourceTree = "<group>"; };
 		CE6347D8198B4CBC0074E7D4 /* CodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CodeViewController.xib; sourceTree = "<group>"; };
@@ -1533,6 +1535,7 @@
 			isa = PBXGroup;
 			children = (
 				CE5BAD0519FDEE5800AB85D9 /* _hug_Tests.m */,
+				CE5BAD0D19FDFA4300AB85D9 /* ExampleTestCase.m */,
 				CE5BAD0319FDEE5800AB85D9 /* Supporting Files */,
 			);
 			path = "9hug Tests";
@@ -1756,10 +1759,11 @@
 				ORGANIZATIONNAME = Home;
 				TargetAttributes = {
 					742F97E21957D0F700C9F881 = {
-						DevelopmentTeam = RHWVARR87L;
+						DevelopmentTeam = N2AZ5MXD3Y;
 					};
 					CE5BAD0019FDEE5800AB85D9 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = N2AZ5MXD3Y;
 						TestTargetID = 742F97E21957D0F700C9F881;
 					};
 				};
@@ -2188,6 +2192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5BAD0E19FDFA4300AB85D9 /* ExampleTestCase.m in Sources */,
 				CE5BAD0619FDEE5800AB85D9 /* _hug_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2282,7 +2287,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tran Vu Viet Anh (N2AZ5MXD3Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tran Vu Viet Anh (BU79S2D2W2)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2294,7 +2299,7 @@
 					"$(PROJECT_DIR)/Code/Lib/CrittercismSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9c10d03a-207d-4355-897b-8dd6fbd4a169";
+				PROVISIONING_PROFILE = "c2cebeee-961f-46e9-8310-836e454acdb3";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2341,6 +2346,8 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -2355,6 +2362,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/9hug.app/9hug";
 			};
 			name = Debug;
@@ -2364,6 +2372,8 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -2374,6 +2384,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/9hug.app/9hug";
 			};
 			name = Release;
@@ -2415,6 +2426,7 @@
 				CE5BAD0B19FDEE5800AB85D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
