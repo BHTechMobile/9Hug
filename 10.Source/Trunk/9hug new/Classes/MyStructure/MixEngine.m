@@ -127,6 +127,7 @@ completionHandler:(MixResponse)response
     
     NSMutableArray *inputParams = [NSMutableArray arrayWithCapacity:2];
     
+    NSString * videoName = [NSString stringWithFormat:@"%@.mp4",[NSString generateRandomString:8]];
     // add audio
     AVMutableCompositionTrack *compositionAudioTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeAudio
                                                                                    preferredTrackID:kCMPersistentTrackID_Invalid];
@@ -170,8 +171,21 @@ completionHandler:(MixResponse)response
     AVAssetExportSession* _assetExport = [[AVAssetExportSession alloc] initWithAsset:mixComposition
                                                                           presetName:AVAssetExportPresetHighestQuality];
     
-    NSString *exportPath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp4",[NSString generateRandomString:8]]];
+    NSString *exportPath = [NSTemporaryDirectory() stringByAppendingPathComponent:videoName];
     NSURL* exportUrl = [NSURL fileURLWithPath:exportPath];
+    
+    
+    NSUserDefaults *urlDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:exportPath])  //Optionally check if folder already hasn't existed.
+    {
+        NSLog(@"Removing file error: folder was not found");
+    }
+    
+    [[NSFileManager defaultManager] removeItemAtPath:[urlDefaults objectForKey:@"urlVideo"] error:nil];
+    
+    [urlDefaults setObject:exportPath forKey:@"urlVideo"];
+    [urlDefaults synchronize];
     
     _assetExport.outputFileType = AVFileTypeMPEG4;
     _assetExport.outputURL = exportUrl;
@@ -204,9 +218,8 @@ completionHandler:(MixResponse)response
     NSString * _pathVideoTmp = videoUrl.path;
     NSString * _pathOutput = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp4",[NSString generateRandomString:8]]];
     NSLog(@"%s",__PRETTY_FUNCTION__);
-    NSLog(@"%@",_pathOutput);
+    NSLog(@"Path out put:%@",_pathOutput);
     NSError * error = nil;
-    
     
     AVMutableComposition *mixComposition = [AVMutableComposition composition];
     CMTime clipStartTime = kCMTimeZero;
@@ -297,7 +310,13 @@ completionHandler:(MixResponse)response
                 }
             }
             //Delete original video
-//            [[NSFileManager defaultManager] removeItemAtPath:_pathVideoTmp error:nil];
+            if (![[NSFileManager defaultManager] fileExistsAtPath:_pathOutput])  //Optionally check if folder already hasn't existed.
+            {
+                NSLog(@"Removing file error: folder was not found");
+            }
+            
+            [[NSFileManager defaultManager] removeItemAtPath:_pathOutput error:nil];
+            
         }];
     }
     

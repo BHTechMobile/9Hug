@@ -14,6 +14,9 @@
 @implementation MixVideoViewController{
     UIButton *buttonBack;
     UIImageView *imageChoose;
+    NSUserDefaults *urlDefaults;
+    NSString *exportPath;
+    NSString *pathOutput;
     
 }
 #define BG_COLOR_PROCESS [UIColor colorWithRed:224.0/255.0 green:100.0/255.0 blue:176.0/255.0 alpha:1.0]
@@ -102,6 +105,8 @@
     [self createUI];
     imageChoose = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 60, 60)];
     imageChoose.image = [UIImage imageNamed:@"GPUImageChangeClick"];
+    urlDefaults = [NSUserDefaults standardUserDefaults];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -219,12 +224,8 @@
         if (i==[sender tag]) {
             UIView *view = (VideoFilterActionView*)_videoFilterScrollView.subviews[i];
             [view addSubview:imageChoose];
-//            ((VideoFilterActionView*)_videoFilterScrollView.subviews[i]).imageView.layer.borderWidth = 3;
-//            ((VideoFilterActionView*)_videoFilterScrollView.subviews[i]).imageView.layer.borderColor = [UIColor colorWithRed:69/255.0 green:187/255.0 blue:255/255.0 alpha:1.0].CGColor;
+
         }
-//        else{
-//            ((VideoFilterActionView*)_videoFilterScrollView.subviews[i]).imageView.layer.borderWidth = 0;
-//        }
     }
     [self playVideoWithFilter:[[MixVideoViewController filters] objectAtIndex:[sender tag]]];
     
@@ -511,6 +512,12 @@
 
 - (IBAction)backButtonTapped:(id)sender {
     [movieFile cancelProcessing];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[urlDefaults objectForKey:@"urlVideo"]])  //Optionally check if folder already hasn't existed.
+    {
+        NSLog(@"Removing file error: folder was not found");
+    }
+    [[NSFileManager defaultManager] removeItemAtPath:[urlDefaults objectForKey:@"urlVideo"] error:nil];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -627,8 +634,8 @@
                 [self processMixingWithStatus:status outputURLString:output];
             }];
         });
-
         
+
     }
     else{
         _videoFilterScrollView.userInteractionEnabled = NO;
@@ -699,6 +706,13 @@
                             });
                             _mixed = NO;
                         }];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[urlDefaults objectForKey:@"urlVideo"]])  //Optionally check if folder already hasn't existed.
+    {
+        NSLog(@"Removing file error: folder was not found");
+    }
+    
+    [[NSFileManager defaultManager] removeItemAtPath:[urlDefaults objectForKey:@"urlVideo"] error:nil];
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
