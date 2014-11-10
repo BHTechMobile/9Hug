@@ -727,14 +727,14 @@ bail:
 //    button.frame = CGRectMake(2 ,2,20,28);
 //    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
     
-    UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button2 addTarget:self action:@selector(changeCamera:) forControlEvents:UIControlEventTouchUpInside]; //adding action
-    [button2 setBackgroundImage:[UIImage imageNamed:@"btn_camera_topheader"] forState:UIControlStateNormal];
-    button2.frame = CGRectMake(2 ,2,20,28);
-    UIBarButtonItem *barButton2 = [[UIBarButtonItem alloc] initWithCustomView:button2];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setFrame:CGRectMake(2 ,2,30,28)];
+    [button addTarget:self action:@selector(changeCamera:) forControlEvents: UIControlEventTouchUpInside];
+    [button setBackgroundImage:[UIImage imageNamed:@"btn_camera_topheader"] forState:UIControlStateNormal];
+
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
     
-    //    btn_camera_topheader
-    self.navigationItem.rightBarButtonItems = @[barButton2];
+    self.navigationItem.rightBarButtonItem = barButton;
     
     UIButton* buttonBack = [UIButton buttonWithType:UIButtonTypeCustom];
     [buttonBack setFrame:CGRectMake(2 ,2,14,22)];
