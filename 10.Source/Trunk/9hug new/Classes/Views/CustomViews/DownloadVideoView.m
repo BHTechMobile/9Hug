@@ -56,15 +56,15 @@
         message.downloadedValue = YES;
         [[NSManagedObjectContext MR_defaultContext] MR_saveOnlySelfWithCompletion:nil];
         
-        if (_delegate && [_delegate respondsToSelector:@selector(downloadVideoSuccess)]) {
-            [_delegate downloadVideoSuccess];
+        if (_delegate && [_delegate respondsToSelector:@selector(downloadVideoSuccess:)]) {
+            [_delegate downloadVideoSuccess:message];
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
         message.downloadedValue = NO;
-        if (_delegate && [_delegate respondsToSelector:@selector(downloadVideoFailure)]) {
-            [_delegate downloadVideoFailure];
+        if (_delegate && [_delegate respondsToSelector:@selector(downloadVideoFailure:)]) {
+            [_delegate downloadVideoFailure:message];
         }
         
     } progress:^(float progress) {

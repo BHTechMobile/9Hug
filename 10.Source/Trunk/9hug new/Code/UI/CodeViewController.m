@@ -239,20 +239,18 @@
       }];
 }
 
-- (void)downloadVideoSuccess {
-  _message.downloadedValue = YES;
+- (void)downloadVideoSuccess:(HMessage*)message  {
+  message.downloadedValue = YES;
   [_downloadView hideWithAnimation];
 
-  MSGDetailViewController *msgDetailCtr =
-      [[MSGDetailViewController alloc] initWithNibName:nil bundle:nil];
-  HMessage *message = _message;
+  MSGDetailViewController *msgDetailCtr = [MSGDetailViewController new];
   msgDetailCtr.mKey = message.key;
   msgDetailCtr.capturePath = [NSURL fileURLWithPath:message.localVideoPath];
-  [msgDetailCtr getMessageByKey:message.key];
+  msgDetailCtr.messageObj = message;
   [self.navigationController pushViewController:msgDetailCtr animated:YES];
 }
 
-- (void)downloadVideoFailure {
+- (void)downloadVideoFailure:(HMessage*)message  {
   [_downloadView hideWithAnimation];
   [UIAlertView showTitle:@"Error" message:@"Cann't download this video"];
 }

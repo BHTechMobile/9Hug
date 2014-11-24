@@ -96,6 +96,12 @@
     return sentDate;
 }
 
+-(void)setMessageObj:(HMessage *)messageObj{
+    _messageObj = messageObj;
+    [self setDataWithMessage:_messageObj];
+    [self reloadMediaWithDic];
+}
+
 -(void)getMessageByKey:(NSString*)key{
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [BaseServices getMessageByKey:key sussess:^(AFHTTPRequestOperation *operation, id responseObject) {

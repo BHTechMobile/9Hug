@@ -59,9 +59,9 @@
     return [_datasource getModel].messages.count;
 }
 
--(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return @"Gifts - Stickers";
-}
+//-(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+//    return @"Gifts - Stickers";
+//}
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //    if(indexPath.row < [_datasource getModel].listSubscribeChannel.count){
@@ -91,55 +91,55 @@
     }
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    
-    UIView* footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,tableView.frame.size.width, 60)];
-    footerView.backgroundColor = [UIColor whiteColor];
-    
-    UIButton* footerButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [footerButton setTitle:@"Show more..." forState:UIControlStateNormal];
-    [footerButton.titleLabel setFont:[UIFont regularAppFontOfSize:14.0]];
-    [footerButton addTarget:self action:@selector(showMoreTapped) forControlEvents:UIControlEventTouchUpInside];
-    footerButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    footerButton.layer.borderWidth = 0.0;
-    [footerButton setFrame:CGRectMake(5, 2, tableView.frame.size.width - 5, 18)];
-    
-    [footerView addSubview:footerButton];
-    
-    return footerView;
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+//    
+//    UIView* footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,tableView.frame.size.width, 60)];
+//    footerView.backgroundColor = [UIColor whiteColor];
+//    
+//    UIButton* footerButton = [UIButton buttonWithType:UIButtonTypeSystem];
+//    [footerButton setTitle:@"Show more..." forState:UIControlStateNormal];
+//    [footerButton.titleLabel setFont:[UIFont regularAppFontOfSize:14.0]];
+//    [footerButton addTarget:self action:@selector(showMoreTapped) forControlEvents:UIControlEventTouchUpInside];
+//    footerButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+//    footerButton.layer.borderWidth = 0.0;
+//    [footerButton setFrame:CGRectMake(5, 2, tableView.frame.size.width - 5, 18)];
+//    
+//    [footerView addSubview:footerButton];
+//    
+//    return footerView;
+//}
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 50;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+//    return 50;
+//}
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    
-    UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,tableView.frame.size.width, 60)];
-    headerView.backgroundColor = [UIColor whiteColor];
-    
-    UILabel* headerLabel = [[UILabel alloc] init];
-    headerLabel.frame = CGRectMake(20, 10, tableView.frame.size.width, 18);
-    headerLabel.backgroundColor = [UIColor clearColor];
-    headerLabel.textColor = [UIColor blackColor];
-    headerLabel.font = [UIFont regularAppFontOfSize:14.0];
-    headerLabel.text = @"Gifts - Stickers";
-    headerLabel.textAlignment = NSTextAlignmentLeft;
-    
-    UIButton* headerButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
-    [headerButton addTarget:self action:@selector(addMessageTapped) forControlEvents:UIControlEventTouchUpInside];
-    [headerButton setFrame:CGRectMake(tableView.frame.size.width - 37, 8, 20, 20)];
-    
-    
-    [headerView addSubview:headerLabel];
-    [headerView addSubview:headerButton];
-    return headerView;
-    
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+//    
+//    UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,tableView.frame.size.width, 60)];
+//    headerView.backgroundColor = [UIColor whiteColor];
+//    
+//    UILabel* headerLabel = [[UILabel alloc] init];
+//    headerLabel.frame = CGRectMake(20, 10, tableView.frame.size.width, 18);
+//    headerLabel.backgroundColor = [UIColor clearColor];
+//    headerLabel.textColor = [UIColor blackColor];
+//    headerLabel.font = [UIFont regularAppFontOfSize:14.0];
+//    headerLabel.text = @"Gifts - Stickers";
+//    headerLabel.textAlignment = NSTextAlignmentLeft;
+//    
+//    UIButton* headerButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
+//    [headerButton addTarget:self action:@selector(addMessageTapped) forControlEvents:UIControlEventTouchUpInside];
+//    [headerButton setFrame:CGRectMake(tableView.frame.size.width - 37, 8, 20, 20)];
+//    
+//    
+//    [headerView addSubview:headerLabel];
+//    [headerView addSubview:headerButton];
+//    return headerView;
+//    
+//}
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 30;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+//    return 30;
+//}
 #pragma mark Message Cell Delegate
 
 - (void)resetMessageAtCell:(id)cell{

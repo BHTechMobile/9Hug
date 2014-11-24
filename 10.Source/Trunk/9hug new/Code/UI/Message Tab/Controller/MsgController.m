@@ -9,10 +9,12 @@
 #import "MsgController.h"
 
 #import "MSGDetailViewController.h"
-//#import "MsgDetailsViewController.h"
+#import "DownloadVideoView.h"
 
-@interface MsgController ()
-
+@interface MsgController ()<DownloadVideoDelegate>
+{
+    DownloadVideoView *_downloadView;
+}
 @end
 
 @implementation MsgController
@@ -27,6 +29,8 @@
 }
 
 -(void)loadView{
+
+
     _msgView = [[MsgView alloc] initWithFrame:CGRectZero];
     _msgModel = [[MessageModel alloc] init];
     
@@ -49,17 +53,20 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
     
-    UIButton *addMessageButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
-    [addMessageButton addTarget:self action:@selector(mainAddMessage) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *barButton = [[UIBarButtonItem alloc]initWithCustomView:addMessageButton];
-    [self.navigationItem setRightBarButtonItem:barButton];
+//    UIButton *addMessageButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
+//    [addMessageButton addTarget:self action:@selector(mainAddMessage) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem *barButton = [[UIBarButtonItem alloc]initWithCustomView:addMessageButton];
+//    [self.navigationItem setRightBarButtonItem:barButton];
 }
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    _downloadView = [DownloadVideoView fromNib];
+    _downloadView.alpha = 0.0;
+    _downloadView.delegate = self;
+    [self.view addSubview:_downloadView];
     // Do any additional setup after loading the view.
     
 }
@@ -89,15 +96,26 @@
 
 #pragma mark MsgView Delegate
 - (void)selectedCellAtIndex:(NSIndexPath*)index{
-    MSGDetailViewController *msgDetailCtr = [[MSGDetailViewController alloc] initWithNibName:nil bundle:nil];
+    MSGDetailViewController *msgDetailCtr = [MSGDetailViewController new];
     
      HMessage *message = [_msgModel.messages objectAtIndex:index.row];
     
-    msgDetailCtr.mKey = message.key;
-//    msgDetailCtr.capturePath = message.;
-    [msgDetailCtr getMessageByKey:message.key];
-    [self.navigationController pushViewController:msgDetailCtr animated:YES];
+    if (!message.downloadedValue && message.localVideoPath) {
+        _downloadView.alpha = 1;
+        [_downloadView showWithAnimation];
+        [_downloadView downloadVideoByMessage:message];
+    }
+    else{
+        msgDetailCtr.mKey = message.key;
+        msgDetailCtr.capturePath = [NSURL fileURLWithPath:message.localVideoPath];
+        [self.navigationController pushViewController:msgDetailCtr animated:YES];
+        msgDetailCtr.messageObj = message;
+
+    }
 }
+
+
+
 
 - (void)resetMessageCellAtIndex:(NSIndexPath*)index{
     
@@ -145,10 +163,28 @@
     [alertView show];
 }
 
-#pragma mark MsgView Datasource
+#pragma mark - MsgView Datasource
 
 -(MessageModel*)getModel{
     return _msgModel;
 }
+
+#pragma mark - Download Message
+
+- (void)downloadVideoSuccess:(HMessage*)message {
+    message.downloadedValue = YES;
+    [_downloadView hideWithAnimation];
+    MSGDetailViewController *msgDetailCtr = [MSGDetailViewController new];
+    msgDetailCtr.mKey = message.key;
+    msgDetailCtr.capturePath = [NSURL fileURLWithPath:message.localVideoPath];
+    [self.navigationController pushViewController:msgDetailCtr animated:YES];
+    msgDetailCtr.messageObj = message;
+}
+
+- (void)downloadVideoFailure:(HMessage*)message  {
+    [_downloadView hideWithAnimation];
+    [UIAlertView showTitle:@"Error" message:@"Cann't download this video"];
+}
+
 
 @end

@@ -41,27 +41,26 @@
     NSDictionary *dicResponse;
 }
 @property(nonatomic,retain) LCVoice * voice;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, strong) AVAudioRecorder *audioRecorder;
 @property(nonatomic,strong) PlayerView* videoPlayer;
 @property(nonatomic,strong) MPMediaItem* audioItem;
 @property(nonatomic,strong) NSURL* exportUrl;
 @property(nonatomic,assign) BOOL mixed;
 @property(nonatomic,strong) NSString* message;
-@property (strong, nonatomic) IBOutlet UIView *viewExtend;
 
-@property (weak, nonatomic) IBOutlet UIView *playerView;
-
-@property (weak, nonatomic) IBOutlet UIView *viewAudio;
 @property (nonatomic, strong) HMessage *messageObj;
 
 @property (nonatomic, strong) DownloadVideoView *downloadView;
 @property (nonatomic, strong) NSString *mKey;
 @property (nonatomic, strong) NSURL *capturePath;
-@property (nonatomic) IBOutlet UIButton *_btnPlayRecordAudio;
-
 @property (nonatomic, strong) NSMutableArray* listPhotos;
 @property (nonatomic, strong) NSMutableArray* listVoices;
+@property (nonatomic) IBOutlet UIButton *_btnPlayRecordAudio;
+
+@property (strong, nonatomic) IBOutlet UIView *viewExtend;
+@property (weak, nonatomic) IBOutlet UIView *playerView;
+@property (weak, nonatomic) IBOutlet UIView *viewAudio;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 // Extend view
 @property (weak, nonatomic) IBOutlet UIImageView *quoteButton;
@@ -91,18 +90,18 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageStatusRecord;
 @property (weak, nonatomic) IBOutlet UIButton *btnCancelRecord;
 @property (weak, nonatomic) IBOutlet UIButton *btnSendRecord;
+@property (weak, nonatomic) IBOutlet UIButton *btnRecord;
+
 - (IBAction)clickCancelRecord:(id)sender;
 - (IBAction)clickSendRecord:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *btnRecord;
 - (IBAction)recordStart:(id)sender;
 - (IBAction)recordEnd:(id)sender;
-
 - (IBAction)sendRecord:(id)sender;
 - (IBAction)holdAndRecord:(id)sender;
-
 - (IBAction)playDefault:(id)sender;
 -(IBAction)playAudio:(id)sender;
--(void)getMessageByKey:(NSString*)key;
 - (IBAction)addImage:(id)sender;
+
+-(void)getMessageByKey:(NSString*)key;
 
 @end

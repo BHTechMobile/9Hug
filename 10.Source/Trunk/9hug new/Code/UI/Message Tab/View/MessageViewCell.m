@@ -70,7 +70,7 @@
     
     NSString *imgURL = [NSString stringWithFormat:@"%@%@",Thumbnail_Message_Cell_URL,message.key];
     
-    [_imgView setImageWithURL:[NSURL URLWithString:imgURL] placeholderImage:[UIImage imageNamed:@"holder.png"] options:SDWebImageProgressiveDownload completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+    [_imgView setImageWithURL:[NSURL URLWithString:imgURL] placeholderImage:[UIImage imageNamed:@"icon_user_placeholder"] options:SDWebImageProgressiveDownload completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
         if(error.code == 404){
             NSLog(@"Error: Image not found");
         }

@@ -10,8 +10,8 @@
 
 @protocol DownloadVideoDelegate <NSObject>
 
--(void)downloadVideoSuccess;
--(void)downloadVideoFailure;
+-(void)downloadVideoSuccess:(HMessage*)message;
+-(void)downloadVideoFailure:(HMessage*)message;
 
 @end
 
