@@ -15,6 +15,11 @@
 
 #import "Globals.h"
 #import "HMessage.h"
+#import "Voice.h"
+#import "Photo.h"
+#import "PhotoModel.h"
+#import "MessageModel.h"
+#import "VoiceModel.h"
 #import "PlayerView.h"
 #import "UIImage+Resize.h"
 #import "UIImageView+MJWebCache.h"
@@ -25,6 +30,12 @@
 #import "DownloadVideoView.h"
 #import "SquareCamViewController.h"
 
+@class PhotoModel;
+@protocol PhoViewDataSource <NSObject>
+
+-(PhotoModel*)getModel;
+
+@end
 @interface MSGDetailViewController : UIViewController<AVAudioPlayerDelegate,MPMediaPickerControllerDelegate,UIAlertViewDelegate,UIScrollViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIActionSheetDelegate,AVAudioRecorderDelegate,CameraDelegate>
 {    
 
@@ -39,7 +50,14 @@
     UIActionSheet *_imageSourceActionSheet;
     NSURL *urlRecord;
     NSDictionary *dicResponse;
+    PhotoModel *photoModel;
+    VoiceModel *voiceModel;
+    MessageModel *messageModel;
 }
+- (IBAction)testViewPhoto:(id)sender;
+
+@property (nonatomic,strong) NSMutableArray* photos;
+@property (nonatomic,assign) id<MsgViewDataSource> datasource;
 @property(nonatomic,retain) LCVoice * voice;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, strong) AVAudioRecorder *audioRecorder;
@@ -54,8 +72,10 @@
 
 @property (weak, nonatomic) IBOutlet UIView *viewAudio;
 @property (nonatomic, strong) HMessage *messageObj;
-
+@property (nonatomic, strong) Photo *photoObj;
+@property (nonatomic, strong) Voice *voiceObj;
 @property (nonatomic, strong) DownloadVideoView *downloadView;
+
 @property (nonatomic, strong) NSString *mKey;
 @property (nonatomic, strong) NSURL *capturePath;
 @property (nonatomic) IBOutlet UIButton *_btnPlayRecordAudio;
