@@ -7,7 +7,8 @@
 //
 
 #import "MSGDetailViewController.h"
-
+#import "MsgView.h"
+#import "Photo.h"
 #define BG_COLOR_BLUE [UIColor colorWithRed:0 green:190.0f/255.0f blue:242.0f/255.0f alpha:1.0f]
 #define PHOTO_SOURCE_PICKER_TITLE @"Attach a Picture"
 #define PHOTO_SOURCE_CAMERA @"From Camera"
@@ -68,6 +69,10 @@
     [_labelReads setText:message.reads];
 }
 
+-(void)setDataWithPhoto:(Photo*)Photo{
+    
+}
+
 - (void)resetFrameViewMedia:(NSString *)string{
     if (string.length>0) {
         if ([Utilities getTextHeight:_textDescreption]<TEXTVIEW_HEGHT) {
@@ -111,6 +116,36 @@
         dicResponse = [NSDictionary dictionaryWithDictionary:(NSDictionary *)responseObject];
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         _messageObj = [HMessage createByDictionary:dicResponse];
+//        _photoObj = [Photo createByDictionary:dicResponse];
+        
+        NSDictionary* dictPhoto = (NSDictionary*)responseObject;
+        NSMutableArray *arrPhotoObject = [NSMutableArray new];
+        
+        for (NSDictionary *dicPhotoObject in [dictPhoto objectForKey:@"photos"]) {
+            Photo *photoObject = [Photo createByDictionary:dicPhotoObject];
+            [[NSManagedObjectContext MR_defaultContext] MR_saveOnlySelfWithCompletion:nil];
+            [arrPhotoObject addObject:photoObject];
+          
+        }
+        
+        for ( Photo *photoObject in arrPhotoObject) {
+            NSLog(@"id photo= %@", photoObject.pid);
+            
+        }
+        
+        NSDictionary *dictVoice = (NSDictionary*)responseObject;
+        NSMutableArray *arrVoiceObject = [NSMutableArray new];
+        for (NSDictionary *dicVoiceObject in [dictVoice objectForKey:@"voices"]) {
+            Voice *voiceObject = [Voice createByDictionary:dicVoiceObject];
+            [[NSManagedObjectContext MR_defaultContext] MR_saveOnlySelfWithCompletion:nil];
+            [arrVoiceObject addObject:voiceObject];
+            
+        }
+//        for ( Voice *voiceObject in  arrVoiceObject) {
+//            NSLog(@"id for voice = %@", voiceObject.vid);
+//            
+//        }
+        
         [self setDataWithMessage:_messageObj];
         [self reloadMediaWithDic];
     } failure:^(NSString* bodyString, NSError *error) {
@@ -122,7 +157,9 @@
 
 - (void)reloadMediaWithDic {
     if ([[dicResponse objectForKey:PHOTO_KEY] isKindOfClass:[NSArray class]] ) {
+        
         if (_arrayPicture.count != [(NSArray *)[dicResponse objectForKey:PHOTO_KEY] count]) {
+            
             [self addImageToScrollView];
         }
     }
@@ -138,7 +175,6 @@
 {
     [super viewDidLoad];
     [APP_DELEGATE.tabbar hideMe];
-    
     if (_capturePath!=nil) {
         [self createUI];
         [self setupRemotePlayerByUrl:_capturePath];
@@ -158,6 +194,14 @@
     [_btnSendRecord setHidden:YES];
     
     self.voice = [[LCVoice alloc] init];
+    [self loadPhotoFromDB];
+     NSLog(@"lisdd:%lu",(unsigned long)_photos.count);
+}
+-(void)loadPhotoFromDB{
+    NSArray* photos = [Photo MR_findAll];
+    if (photos) {
+        [_photos addObjectsFromArray:photos];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -340,6 +384,7 @@
     NSLog(@"file name = %@",fileName);
     NSString *urlOutPut2 = [NSHomeDirectory() stringByAppendingPathComponent:fileName];
     audioPlayer = nil;
+    NSLog(@"dd= %@", urlOutPut2);
     [_btnPlay setBackgroundImage:[UIImage imageNamed:@"btn_mix_play@2x"] forState:UIControlStateNormal];
     NSError *err;
     audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:urlOutPut2]
@@ -576,6 +621,8 @@
     //upload
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [BaseServices uploadImage:dicParam path:[NSURL fileURLWithPath:URL_ATTACH_IMAGE] sussess:^(AFHTTPRequestOperation *operation, id responseObject) {
+//    NSDictionary* dict = (NSDictionary*)responseObject;
+//    [Photo createByDictionary:dict];
         [self getMessageByKey:_mKey];
     } failure:^(NSString *bodyString, NSError *error) {
         NSLog(@"fail %@", bodyString);
@@ -612,7 +659,6 @@
         [_arrayPicture addObject:[dic objectForKey:MEDIA_KEY]];
         [Utilities setImageForButton:imageView andURLImage:[dic objectForKey:MEDIA_KEY] andArrayCaches:_arrayPictureCaches];
         imageView.tag = index;
-        
         imageView.userInteractionEnabled = YES;
         [imageView addTarget:self action:@selector(tapImage:) forControlEvents:UIControlEventTouchUpInside ];
         imageView.clipsToBounds = YES;
@@ -625,6 +671,7 @@
         }        //set imagecache
     }
     NSLog(@"_arrayPicture = %@",_arrayPicture);
+    NSLog(@"arrayphoto:%@",_photos);
 }
 
 - (UIImage *)imageWithColor:(UIColor *)color
@@ -722,4 +769,8 @@
     }];
 }
 
+- (IBAction)testViewPhoto:(id)sender {
+    testViewController *test= [[testViewController alloc]init];
+    [self.navigationController pushViewController:test animated:true];
+}
 @end
